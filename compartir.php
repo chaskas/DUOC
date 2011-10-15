@@ -26,7 +26,7 @@
 	<script>jQuery.noConflict();</script>
 	<script type="text/javascript" src="js/jquery.validate.js"></script>		
 	<script>
-		var img = "&nbsp;<img src='/admision/images/publish_x.png' />";	
+		var img = "&nbsp;<img src='images/publish_x.png' />";	
 		jQuery(document).ready(function() { 		
 			jQuery("#frmmailto").validate({
 				rules: {			
@@ -58,7 +58,7 @@
 <body>
 <div class="thickbox">
 	<h2><span>Comparte este enlace con tu amigo.</span></h2><br />
-	<form action="contacto.do?accion=enviarComparte" name="frmmailto" id="frmmailto" method="post">
+	<form action="enviarCompartir.php" name="frmmailto" id="frmmailto" method="post">
 
         <div class="campos">
             <table width="316" border="0" cellpadding="0" cellspacing="0">
@@ -136,7 +136,7 @@
                   </tr>                                             
               </table>
 		</div>
-		<input type="hidden" name="enlace" 	value="<%=request.getParameter("enlace")%>" />
+		<input type="hidden" name="enlace" 	value="<?php echo $_GET['enlace']; ?>" />
 		</form>		
 </div>      
 	
