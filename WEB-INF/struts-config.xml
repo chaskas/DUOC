@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+  	<form-bean name="carrerasForm" type="cl.duoc.admision.struts.form.CarrerasForm" />
+  	<form-bean name="contactoForm" type="cl.duoc.admision.struts.form.ContactoForm" />
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="carrerasForm"
+      name="carrerasForm"
+      parameter="accion"
+      path="/carreras"
+      scope="request"
+      type="cl.duoc.admision.struts.action.CarrerasAction">
+      <forward name="detalle_sede_imprimir" path="/detalle-de-la-sede/sede/detalle_sede_imprimir.jsp" />
+      <forward name="detalle_sede" path="/detalle-de-la-sede/sede/detalle_sede.jsp" />
+      <forward name="detalle" path="/detalle_carrera.jsp" />
+      <forward name="lista_carreras" path="/carreras-y-sedes/carreras/carreras.jsp" />
+      <forward name="detalle_imprimir" path="/detalle_carrera_print.jsp" />
+    </action>
+    <action
+      attribute="contactoForm"
+      name="contactoForm"
+      parameter="accion"
+      path="/contacto"
+      type="cl.duoc.admision.struts.action.ContactoAction">
+      <forward
+        name="resultado_comparte"
+        path="/includes/resultado_comparte.html"
+        redirect="true" />
+      <forward
+        name="resultado_contacto"
+        path="/resultado_contacto.jsp"
+        redirect="true" />
+      <forward name="inicio" path="/index.html" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="cl.duoc.admision.struts.ApplicationResources" />
+</struts-config>
+

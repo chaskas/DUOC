@@ -1,0 +1,233 @@
+/* Listado de estilos DUOC UC */
+/* Creado por: Peoplechess.cl */
+/* Desarrolladores: Marcelo Ordenes, Carlos Baeza */
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: GENERALES :::::::::::::::::::::::::::*/
+body { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; background:#fff repeat left top;}
+p { margin:0; padding:0;}
+ul, ol, li { margin:0; padding:0 0 0 20px;}
+h1, h2, h3, h4, h5, h6 { margin:0; padding:0;}
+img { border:none;}
+form { margin:0; padding:0;}
+.borrado { margin:0; padding:0; clear:both; line-height:1px; font-size:1px; }
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ESTILOS EDITOR ::::::::::::::::::::::*/
+.titulo { margin:0; padding: 0; font-family:Arial, Helvetica, sans-serif; font-size:19px; color:#16205e; font-weight:bold; /*width:554px;*/ }
+.titulo_dos { margin:0; padding: 0; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#006699; font-weight:normal;}
+/*.titulo_dos { margin:0; padding: 0; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#006699; font-weight:normal; /*width:554px;*}*/
+.titulo_tres { margin:0; padding: 0 0 16px 0; font-family:Arial, Helvetica, sans-serif; font-size:19px; color:#16205e; font-weight:bold; /*width:554px;*/ }
+.titulo_cuatro { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:11px; text-transform:uppercase; color:#006699; font-weight:bold; }
+.titulo_cinco { margin:0; padding: 0 0 10px 0; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#006699!important; font-weight:normal; /*width:554px;*/}
+.txt {color:#777777;font-family:Arial,Helvetica,sans-serif;font-size:12px;margin:0;padding:0;}
+.linea_dotted { margin:0 0 10px 0; padding:5px 0 0 0; border-bottom:#e1e1e1 1px dotted; }
+.linea_dotted_dos { margin:0 auto; padding:0; border-bottom:#777777 1px dotted; width:350px; }
+.linea_dotted_ne { margin:0 auto; padding:5px 0; border-bottom:#777777 1px dotted; width:196px; }
+.titulo_seis {color:#181F31;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;margin:0;padding:0 0 10px; }
+.titulo_siete { margin:0; padding: 0 0 10px 0; font-family:Arial, Helvetica, sans-serif; font-size:19px; color:#16205e; font-weight:bold; /*width:554px;*/ }
+.btn { margin:0; padding:20px 0; float:right;}
+ 
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: HOME ::::::::::::::::::::::::::::::::*/
+#contenedor_general { margin:0 auto; padding:0; width:986px; height:auto; background-image:url(../images/bg_content.jpg); background-repeat:repeat-y; }
+#contenedor_general .contenedor_int { margin:0 auto; padding:0; width:986px; height:auto; }
+
+/*:::: HEADER ::::*/
+#contenedor_general .contenedor_int .header { margin:0 auto; padding:0; width:980px; height:94px; background-image:url(../images/bg_header.jpg); background-repeat:repeat-y; }
+
+/*:::: MENU (moduletable_menu) ::::*/
+#contenedor_general .contenedor_int .header .moduletable_menu { float:right; margin:0; padding:0; width:425px; height:22px; background-image:url(../images/bg_menu_header.jpg); background-repeat:no-repeat;}
+#contenedor_general .contenedor_int .header .moduletable_menu ul{ margin:0; padding:3px 0 0 7px; list-style:none; }
+#contenedor_general .contenedor_int .header .moduletable_menu ul li{ float:left; margin:0; padding:0 20px; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#FFF; font-weight:bold; background-image:url(../images/separador_menu_sup.jpg); background-repeat:no-repeat; background-position:right; }
+#contenedor_general .contenedor_int .header .moduletable_menu ul .last{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#FFF; font-weight:bold; background-image:none!important;}
+#contenedor_general .contenedor_int .header .moduletable_menu ul li a{ color:#FFF; text-decoration:none; }
+#contenedor_general .contenedor_int .header .moduletable_menu ul li a:hover{ color:#ffb512; text-decoration:none; }
+#contenedor_general .contenedor_int .header .moduletable_menu ul li .active{ color:#ffb512; text-decoration:none; }
+
+/*:::: LOGO ::::*/
+#contenedor_general .contenedor_int .header .logo { float:left; margin:0; padding:22px 0 0 80px; width:257px; height:59px;}
+#contenedor_general .contenedor_int .header .logo h1 { margin:0; padding:0;}
+#contenedor_general .contenedor_int .header .logo h1 a { display:block; margin:0; padding:0; width:257px; height:59px; background-image:url(../images/duoc-uc.png); background-repeat:no-repeat;}
+#contenedor_general .contenedor_int .header .logo h1 a span { display:none;}
+
+/*:::: TITULOS ::::*/
+#contenedor_general .contenedor_int .header .titulos { float:left; margin:0; padding:0; width:175px; height:90px;}
+
+/*:::: MENU BUSCADOR REDES::::*/
+#contenedor_general .contenedor_int .header .menu_buscador_redes { margin:0; padding:4px 0 0 0; float:right; margin:0; width:435px!important; }
+
+/*:::: MENU (moduletable_menu_dos) ::::*/
+.moduletable_funcional_admision { /*float:left;*/ padding:0; margin:36px 0 0 550px; /*width:270px;*/ height:22px; position:absolute;}
+.moduletable_funcional_admision ul{ margin:0; padding:3px 0 0 7px; list-style:none; font-weight:normal; }
+.moduletable_funcional_admision ul li{ float:left; margin:0; padding:0 10px; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#7a7a7a; font-weight:bold; background-image:url(../images/separador_menu_sup_dos.jpg); background-repeat:no-repeat; background-position:right; font-weight:normal;}
+.moduletable_funcional_admision ul .last{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#7a7a7a; font-weight:normal; background-image:none!important;}
+.moduletable_funcional_admision ul li a{ color:#7a7a7a; text-decoration:none; font-weight:normal;}
+.moduletable_funcional_admision ul li a:hover{ color:#7a7a7a; text-decoration:none; text-decoration:underline;}
+.moduletable_funcional_admision ul li .active{ color:#7a7a7a; text-decoration:none; text-decoration:underline; }
+
+/*:::: MENU (moduletable_menu_dos) ::::*/
+.moduletable_funcional_alumnos { /*float:left;*/ padding:0; margin:36px 0 0 488px; /*width:270px;*/ height:22px; position:absolute;}
+.moduletable_funcional_alumnos ul{ margin:0; padding:3px 0 0 7px; list-style:none; font-weight:normal; }
+.moduletable_funcional_alumnos ul li{ float:left; margin:0; padding:0 10px; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#7a7a7a; font-weight:bold; background-image:url(../images/separador_menu_sup_dos.jpg); background-repeat:no-repeat; background-position:right; font-weight:normal;}
+.moduletable_funcional_alumnos ul .last{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#7a7a7a; font-weight:normal; background-image:none!important;}
+.moduletable_funcional_alumnos ul li a{ color:#7a7a7a; text-decoration:none; font-weight:normal;}
+.moduletable_funcional_alumnos ul li a:hover{ color:#7a7a7a; text-decoration:none; text-decoration:underline;}
+.moduletable_funcional_alumnos ul li .active{ color:#7a7a7a; text-decoration:none; text-decoration:underline; }
+
+/*:::: BUSCADOR (moduletable_buscador) ::::*/
+#contenedor_general .contenedor_int .header .menu_buscador_redes .moduletable_buscador  { float:right; margin:0; padding:4px 0 0 0; width:162px; /*background-color:#666;*/}
+#contenedor_general .contenedor_int .header .menu_buscador_redes .moduletable_buscador  input#q { font-family:Arial, Helvetica, sans-serif; background-color:#F7F7F7; border:solid #DBDBDE 1px; width:128px; font-size:10px; color:#999;}
+#contenedor_general .contenedor_int .header .menu_buscador_redes .moduletable_buscador  input { margin:0; padding:0; }
+
+/*:::: REDES (moduletable_redes) ::::*/
+#contenedor_general .contenedor_int .header .menu_buscador_redes .moduletable_redes { float:right; margin:0; padding:7px 9px 1px 1px; width:145px; background-image:url(../images/bg_redes.jpg); background-position:bottom; background-repeat:no-repeat; }
+
+/*:::: MENU PRINICIPAL ADMISION::::*/
+.moduletable_admision_menuprincipal { margin:0 auto; padding:0; width:980px; background-image:url(../images/bg_menu_int.jpg); height:40px; /*margin:0 auto; padding:0; width:980px; background-image:url(../images/bg_menu.jpg); height:50px;*/}
+.moduletable_admision_menuprincipal ul.menu{ margin:0; padding:0 0 0 58px; list-style:none;}
+.moduletable_admision_menuprincipal ul{ margin:0 auto; padding:0; width:850px; font-family:Arial, Helvetica, sans-serif; font-size:13px; list-style:none; }
+.moduletable_admision_menuprincipal ul li{ float:left; margin:0;  font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#FFF; font-weight:bold; /*background-image:url(../images/menu_sep.jpg);*/ background-repeat:no-repeat; background-position:center right; }
+.moduletable_admision_menuprincipal ul li a { text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#FFF; font-weight:bold; background:url(../images/menu_sep.jpg) no-repeat center right; padding:9px 15px; display:block;}
+.moduletable_admision_menuprincipal ul li.active a {background:url(../images/menu_sep.jpg) no-repeat center right; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffb512; font-weight:bold;}
+.moduletable_admision_menuprincipal ul li a:hover{ text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffb512; font-weight:bold;}
+.moduletable_admision_menuprincipal ul li:hover { background:url(../images/bg_menu_active.jpg) no-repeat center top;}
+.moduletable_admision_menuprincipal ul li.active{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffb512; font-weight:bold; background:url(../images/bg_menu_active.jpg) no-repeat center top;}
+.moduletable_admision_menuprincipal ul .last a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; font-weight:bold; background-image:none!important; }
+
+/*:::: MENU PRINICIPAL ALUMNOS::::*/
+.moduletable_alumnos_menuprincipal { margin:0 auto; padding:0; width:980px; background-image:url(../images/bg_menu_int.jpg); height:40px; /*margin:0 auto; padding:0; width:980px; background-image:url(../images/bg_menu.jpg); height:50px;*/}
+.moduletable_alumnos_menuprincipal ul.menu{ margin:0; padding:0 0 0 58px; list-style:none;}
+.moduletable_alumnos_menuprincipal ul{ margin:0 auto; padding:0; width:auto; font-family:Arial, Helvetica, sans-serif; font-size:13px; list-style:none; }
+.moduletable_alumnos_menuprincipal ul li{ float:left; margin:0;  font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#FFF; font-weight:bold; /*background-image:url(../images/menu_sep.jpg);*/ background-repeat:no-repeat; background-position:center right; }
+.moduletable_alumnos_menuprincipal ul li a { text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#FFF; font-weight:bold; background:url(../images/menu_sep.jpg) no-repeat center right; padding:9px 15px; display:block;}
+.moduletable_alumnos_menuprincipal ul li.active a {background:url(../images/menu_sep.jpg) no-repeat center right; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffb512; font-weight:bold;}
+.moduletable_alumnos_menuprincipal ul li a:hover{ text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffb512; font-weight:bold;}
+.moduletable_alumnos_menuprincipal ul li:hover { background:url(../images/bg_menu_active.jpg) no-repeat center top;}
+.moduletable_alumnos_menuprincipal ul li.active{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffb512; font-weight:bold; background:url(../images/bg_menu_active.jpg) no-repeat center top;}
+.moduletable_alumnos_menuprincipal ul .last a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; font-weight:bold; background-image:none!important; }
+
+/*:::: SOMBRA::::*/
+.sombra { position:absolute; /*clear:both;*/ margin:0; padding:0; width:983px!important; height:14px; background-image:url(../images/sombra_n.png); background-repeat:no-repeat; background-position:3px -10px!important; }
+/*:::: FOOTER::::*/
+#contenedor_general .contenedor_int .footer { clear:both; margin:0 auto; padding:0; width:980px; /*height:166px;  */background-image:url(../images/bg_footer.jpg); background-repeat:repeat-x; background-color:#EAE8E9;}
+
+
+/*:::: MENU::::*/
+#contenedor_general .contenedor_int .footer .moduletable_menu { margin:0 auto; padding:14px 0 10px 0; width:978px; background-image:url(../images/menu_footer_sep.png); background-repeat:no-repeat; background-position:bottom;}
+#contenedor_general .contenedor_int .footer .moduletable_menu ul{ margin:0 auto; padding:0; width:773px; height:17px; list-style:none; }
+#contenedor_general .contenedor_int .footer .moduletable_menu ul li{ float:left; margin:0; padding:0 14px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; background-image:url(../images/menu_footer_sep.jpg); background-repeat:no-repeat; background-position:right; }
+#contenedor_general .contenedor_int .footer .moduletable_menu ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; text-decoration:none; }
+#contenedor_general .contenedor_int .footer .moduletable_menu ul li a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; text-decoration:underline; }
+
+/*:::: TXT::::*/
+
+#contenedor_general .contenedor_int .footer .txts { margin:0 auto; padding:0; width:834px;}
+#contenedor_general .contenedor_int .footer .txt_uno { float:left; margin:9px 10px 0 0; padding:30px 0 0 0; width:208px; height:78px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#555555; background-image:url(../images/bg_sep.png); background-repeat:no-repeat; background-position:right; }
+#contenedor_general .contenedor_int .footer .txt_dos { float:left; margin:9px 10px 0 0; padding:15px 0 15px 0; width:431px; /*height:78px;*/ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#555555; background-image:url(../images/bg_sep.png); background-repeat:no-repeat; background-position:429px 15px; }
+#contenedor_general .contenedor_int .footer .txt_tres { float:left; margin:9px 0 0 0; padding:30px 0 0 0; width:174px; height:78px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#555555;background-position:right; }
+
+/*:::: BREADCUMB::::*/
+.moduletable_breadcumb { margin:0; padding:10px 10px 5px 0; width:544px; height:15px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#181f31; text-align:left; }
+.moduletable_breadcumb a{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#181f31; text-decoration:none;}
+.moduletable_breadcumb a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#0a0e18; text-decoration:underline; }
+
+/*:::: LINEA::::*/
+.linea { margin:0 0 10px 0; padding:5px 0 0 0; border-bottom:#e1e1e1 1px solid; clear:both; }
+.linea_dos { margin:0 19px 10px 0; padding:5px 0 0 0; border-bottom:#e1e1e1 1px solid; }
+.linea_tres { margin:0 9px 10px 0; padding:5px 0 0 0; border-bottom:#e1e1e1 1px solid; }
+
+/*:::: COMPARTIR - IMPRIMIR::::*/
+.compartir_imprimir { margin:0; padding: 0; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#181f31; /*width:554px;*/}
+.compartir_imprimir a{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#181f31; text-decoration:none; }
+.compartir_imprimir a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#181f31; text-decoration:underline; }
+
+/*:::: FAQS ::::*/
+.accordion { margin:0; padding:0; }
+.accordion li { color:#777777; font-family:Arial,Helvetica,sans-serif; font-size:11px; list-style-type:none; margin:0; padding:0; width:680px;}
+
+.accordion h4.h { background-image:url(../images/arrow4.gif); background-position:left 3px; background-repeat:no-repeat; color:#4682a4; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:bold; margin:0 0 0 10px; padding:0 0 3px 20px; border-bottom:#dddddd 1px solid; width:680px;}
+.accordion h4.h a.trigger { color:#4682a4; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:bold; margin:0; padding:0; text-decoration:none; }
+
+.accordion h5.h {  background-position:center bottom; background-repeat:no-repeat; color:#0B4199; font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:bold; margin:0; padding:12px 0 10px; }
+.accordion h5.h a.trigger { color:#4682a4; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:bold; margin:0; padding:0; text-decoration:none; }
+
+/*:::: CONTACTO ::::*/
+.form { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#777; }
+.form .inputbox { margin:0; padding:2px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#777; border:#BEC9AB 1px solid; }
+.form .error { margin:0; padding:0 0 0 10px;  }
+
+/********************** Paginador ***********************/
+.k2Pagination { margin:0; padding:5px 0; text-align:center; font-size:11px; color:#666;}
+.k2Pagination a { font-size:11px; color: #666; text-decoration:none; font-weight:bold;}
+.k2Pagination a:hover { text-decoration:underline;}
+.k2Pagination .pagenav { padding:0 5px;}
+
+/**********************COMPARTIR IMPRIMIR ***********************/
+.moduletable_compartir_imprimir { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#181f31; }
+.moduletable_compartir_imprimir a{ text-decoration:none; color:#181f31;}
+.moduletable_compartir_imprimir a:hover{ text-decoration:underline; color:#181f31;}
+
+/**********************FECHA CONTENT ***********************/
+.moduletable_fecha_content { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#777; }
+.moduletable_fecha_content a{ color:#777; text-decoration:none; }
+.moduletable_fecha_content a:hover{ color:#777; text-decoration:none; }
+
+/**********************FAQS ***********************/
+.sitemap{margin:0;padding:0}
+
+.componentheading {margin:0 0 15px 0;padding:0 0 7px 0;font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#2e548d; font-weight:bold; border-bottom:#c3c3c3 1px solid;}
+
+.menutitle { display:none!important;}
+
+.contentpaneopen{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666;}
+.contentpaneopen a{margin:0;padding:0;text-decoration:none;color:#666;}
+.contentpaneopen a:hover{margin:0;padding:0;text-decoration:underline;color:#666;}
+
+.contentpaneopen ul{margin:0;padding:0;list-style:none;}
+.contentpaneopen ul{margin:0;padding:0;font-size:16px}
+
+.contentpaneopen li{ font-weight:bold; line-height:17px; font-size:12px;}
+.contentpaneopen li a{margin:0; padding:2px 0 0 25px;  color:#060f44; background-image:url(../images/bullet_ul.jpg); background-repeat:no-repeat;background-position:left; }
+.contentpaneopen li a:hover{color:#060f44;margin:0; padding:2px 0 0 25px; }
+
+.contentpaneopen li li{margin:0; padding:2px 0 0 0;color:#656464;background-image:none;font-size:12px;}
+.contentpaneopen li li a{color:#656464;}
+.contentpaneopen li li a:hover{color:#656464; }
+
+.contentpaneopen li li li{margin:0;padding:2px 0 0 0;font-weight:normal;background-image:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#779bd3;font-weight:bold;}
+.contentpaneopen li li li a{margin:0;padding:2px;font-weight:normal;background-image:none;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#779bd3;font-weight:bold;}
+.contentpaneopen li li li a:hover{margin:0;padding:2px;font-weight:normal;background-image:none;font-weight:bold;}
+
+.contentpaneopen li li li li{margin:0;padding:2px 0 0 0;color:#666;font-weight:normal;background-image:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#707070;}
+.contentpaneopen li li li li a{margin:0;padding:2px;color:#666;font-weight:normal;background-image:none;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#707070;}
+.contentpaneopen li li li li a:hover{margin:0;padding:2px;color:#666;font-weight:normal;background-image:none;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#707070;}
+
+.sitemap ul.level_0 ul{ margin:0; padding: 10px 10px 10px 0; font-size:12px; list-style:none; }
+
+.sitemap ul.level_1 ul{ margin:0; padding:0; }
+.sitemap ul.level_1 li {margin:0;padding:2px 0 0 30px;color:#656464;background-image:none;font-size:11px;}
+.sitemap ul.level_1 li a{margin:0;padding:2px;color:#656464;background-image:none; font-weight:normal!important; }
+.sitemap ul.level_1 li a:hover{margin:0;padding:2px;color:#656464;background-image:none; }
+
+.sitemap ul.level_2 ul{ margin:0; padding:0; }
+.sitemap ul.level_2 li {margin:0;padding:2px 0 0 20px;color:#656464;background-image:none;font-size:11px;}
+.sitemap ul.level_2 li a{margin:0;padding:2px;color:#656464;background-image:none; font-weight:normal!important; }
+.sitemap ul.level_2 li a:hover{margin:0;padding:2px;color:#656464;background-image:none; }
+
+.sitemap ul.level_3 ul{ margin:0; padding:0; }
+.sitemap ul.level_3 li {margin:0;padding:2px 0 0 20px;color:#656464;background-image:none;font-size:11px;}
+.sitemap ul.level_3 li a{margin:0;padding:2px;color:#656464;background-image:none; font-weight:normal!important; }
+.sitemap ul.level_3 li a:hover{margin:0;padding:2px;color:#656464;background-image:none; }
+
+.sitemap ul.level_4 ul{ margin:0; padding:0; }
+.sitemap ul.level_4 li {margin:0;padding:2px 0 0 20px;color:#656464;background-image:none;font-size:11px;}
+.sitemap ul.level_4 li a{margin:0;padding:2px;color:#656464;background-image:none; font-weight:normal!important; }
+.sitemap ul.level_4 li a:hover{margin:0;padding:2px;color:#656464;background-image:none; }
+
+/**********************DESTACADOS ***********************/
+.content { float:left; margin:0; padding:0 0 10px 11px ; width:791px; }
+.content .contenido { margin:0; padding:0; }
+.content .contenido .image { margin:0; padding:0; float:right; }
+
+/**********************FILTROS ***********************/
+#mundos_sedes { border:1px solid #8FADC6; color:#666666; font-size:12px; margin:0; padding:1px; width:160px; }
+#mundos_temas { border:1px solid #8FADC6; color:#666666; font-size:12px; margin:0; padding:1px; width:160px; }
+#mundos { border:1px solid #8FADC6; color:#666666; font-size:12px; margin:0; padding:1px; width:160px; }

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es-es" dir="ltr">
+<head>
+	  <!--<base href="" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="instituto profesional, educación superior, centro de formación técnica, admisión, universidades chilenas, carreras profesionales, carreras técnicas, carreras, matrícula 2011" />
+  <meta name="title" content="Duoc UC" />
+  <meta name="description" content="Duoc UC es el primer instituto profesional acreditado por 7 años. Porque el país necesita personas que lo hagan crecer, ven a Duoc UC. Creces tú, crece Chile." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Duoc UC</title>
+  <link href="templates/system/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="components/com_k2/css/k2.css" type="text/css" />
+  <script type="text/javascript" src="media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="media/system/js/modal.js"></script>
+  <script type="text/javascript" src="components/com_k2/js/k2.js"></script>
+  <script type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+
+			$$('a.modal').each(function(el) {
+				el.addEvent('click', function(e) {
+					new Event(e).stop();
+					SqueezeBox.fromElement(el);
+				});
+			});
+		});
+var K2RatingURL = 'http://duocvr5.vrweb.cl/';
+  </script>
+  <!--[if IE 7]><link href="../components/com_k2/css/k2_ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if lte IE 6]><link href="../components/com_k2/css/k2_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+  	<script type="text/javascript">
+var xajaxRequestUri="http://duocvr5.vrweb.cl/index2.php?option=com_registrate&view=registrate&keepThis=true&TB_iframe=true&height=500&width=600";
+var xajaxDebug=false;
+var xajaxStatusMessages=false;
+var xajaxWaitCursor=true;
+var xajaxDefinedGet=0;
+var xajaxDefinedPost=1;
+var xajaxLoaded=false;
+function xajax_ingresa_suscripcion(){return xajax.call("ingresa_suscripcion", arguments, 1);}
+function xajax_getComunas(){return xajax.call("getComunas", arguments, 1);}
+function xajax_getcarreras(){return xajax.call("getcarreras", arguments, 1);}
+function xajax_getsedes(){return xajax.call("getsedes", arguments, 1);}
+function xajax_participa(){return xajax.call("participa", arguments, 1);}
+function xajax_cambiar_action(){return xajax.call("cambiar_action", arguments, 1);}
+function xajax_getSedesPorCarrera(){return xajax.call("getSedesPorCarrera", arguments, 1);}
+	</script>
+	<script type="text/javascript" src="includes/xajax/xajax_js/xajax.js"></script>
+	<script type="text/javascript">
+window.setTimeout(function () { if (!xajaxLoaded) { alert('Error: the xajax Javascript file could not be included. Perhaps the URL is incorrect?\nURL: /includes/xajax/xajax_js/xajax.js'); } }, 6000);
+	</script>
+
+
+	<link rel="stylesheet" href="templates/system/css/general.css" type="text/css" />
+		<link rel="stylesheet" href="templates/system/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		  <!--<base href="" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="instituto profesional, educación superior, centro de formación técnica, admisión, universidades chilenas, carreras profesionales, carreras técnicas, carreras, matrícula 2011" />
+  <meta name="title" content="Duoc UC" />
+  <meta name="description" content="Duoc UC es el primer instituto profesional acreditado por 7 años. Porque el país necesita personas que lo hagan crecer, ven a Duoc UC. Creces tú, crece Chile." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Duoc UC</title>
+  <link href="templates/system/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="components/com_k2/css/k2.css" type="text/css" />
+  <script type="text/javascript" src="media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="media/system/js/modal.js"></script>
+  <script type="text/javascript" src="components/com_k2/js/k2.js"></script>
+  <script type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+
+			$$('a.modal').each(function(el) {
+				el.addEvent('click', function(e) {
+					new Event(e).stop();
+					SqueezeBox.fromElement(el);
+				});
+			});
+		});
+var K2RatingURL = 'http://duocvr5.vrweb.cl/';
+  </script>
+  <!--[if IE 7]><link href="../components/com_k2/css/k2_ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if lte IE 6]><link href="../components/com_k2/css/k2_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+  	<script type="text/javascript">
+var xajaxRequestUri="http://duocvr5.vrweb.cl/index2.php?option=com_registrate&view=registrate&keepThis=true&TB_iframe=true&height=500&width=600";
+var xajaxDebug=false;
+var xajaxStatusMessages=false;
+var xajaxWaitCursor=true;
+var xajaxDefinedGet=0;
+var xajaxDefinedPost=1;
+var xajaxLoaded=false;
+function xajax_ingresa_suscripcion(){return xajax.call("ingresa_suscripcion", arguments, 1);}
+function xajax_getComunas(){return xajax.call("getComunas", arguments, 1);}
+function xajax_getcarreras(){return xajax.call("getcarreras", arguments, 1);}
+function xajax_getsedes(){return xajax.call("getsedes", arguments, 1);}
+function xajax_participa(){return xajax.call("participa", arguments, 1);}
+function xajax_cambiar_action(){return xajax.call("cambiar_action", arguments, 1);}
+function xajax_getSedesPorCarrera(){return xajax.call("getSedesPorCarrera", arguments, 1);}
+	</script>
+	<script type="text/javascript" src="includes/xajax/xajax_js/xajax.js"></script>
+	<script type="text/javascript">
+window.setTimeout(function () { if (!xajaxLoaded) { alert('Error: the xajax Javascript file could not be included. Perhaps the URL is incorrect?\nURL: /includes/xajax/xajax_js/xajax.js'); } }, 6000);
+	</script>
+
+
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script>jQuery.noConflict();</script>
+		<script type="text/javascript" src="js/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/jquery.rut.js"></script>
+		<link href="templates/home_portal/css/style_admision.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery("#frmreg").validate({
+					rules: {			
+						nombre 			: { required: true, minlength: 2 },	
+						ap_paterno		: { required: true, minlength: 2 },	
+						/*ap_materno		: { required: true, minlength: 2 },*/
+						rut				: { required: true },			
+						email			: { required: true, email: true },			
+						/*celular			: { required: true },*/
+						actividades		: { required: true },					
+						carrera_op_1	: { required: true },
+						sedes_op_1		: { required: true }
+					},
+					messages: {
+						nombre 			: { required: "", minlength: "" },
+						ap_paterno		: { required: "", minlength:"" },
+						/*ap_materno		: { required: "", minlength:"" },*/
+						rut				: { required: "" },
+						email			: { required: "", email: ""  },			
+						/*celular			: { required: "" },*/
+						actividades		: { required: "" },
+						carrera_op_1	: { required: "" },
+						sedes_op_1		: { required: "" }
+					}		
+				});			
+				
+				jQuery("#rut").Rut({
+					format_on:'change'
+				});	
+				
+				jQuery.validator.addMethod("rut", 
+					function(value, element) {
+						return this.optional(element) || jQuery.Rut.validar(value);
+					}, "");	
+			});
+
+			function envia_form(){
+					jQuery("#imgloader").css("display", "block");
+					jQuery("#btloader").css("display", "none");				
+				if (jQuery('#frmreg').valid()){
+					xajax_ingresa_suscripcion(xajax.getFormValues('frmreg'));
+				}else{
+					jQuery("#imgloader").css("display", "none");
+					jQuery("#btloader").css("display", "block");
+				}			
+			}
+		</script>
+		<style>
+			.thickbox .textfield.error { border: 1px solid #FF0000; color:#FF0000; }
+			.thickbox .select.error { border: 1px solid #FF0000; color:#FF0000; }
+		</style>
+
+
+
+	</head>
+	</body><body>
+                <script type="text/javascript">
+                               var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                               document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+
+                <script type="text/javascript">
+                               var pageTracker = _gat._getTracker("UA-5909572-1");
+                               pageTracker._trackPageview();
+                </script>
+
+
+		<form name="frmreg" id="frmreg" action="http://duocvr5.vrweb.cl/" method="post">
+			<div class="thickbox" id="modulo_form">
+				<div class="campos">
+					<table width="316" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="102" height="30" align="right">Nombre</td>
+							<td width="179" height="30" align="right"><input type="text" name="nombre" id="nombre" class="textfield" style="width:147px;" /></td>
+							<td width="35" height="30" align="center">*</td>
+						</tr>
+						<tr>
+							<td height="30" align="right">Apellido Paterno</td>
+							<td width="179" height="30" align="right"><input type="text" name="ap_paterno" id="ap_paterno" class="textfield" style="width:147px;" /></td>
+							<td height="30" align="center">*</td>
+						</tr>
+						<tr>
+							<td height="30" align="right">Apellido Materno</td>
+							<td width="179" height="30" align="right"><input type="text" name="ap_materno" id="ap_materno" class="textfield" style="width:147px;"  /></td>
+							<td height="30" align="center"></td>
+						</tr>
+						<tr>
+							<td height="30" align="right">RUT</td>
+							<td width="179" height="30" align="right">
+								<input type="text" name="rut" id="rut" class="textfield rut" style="width:147px;" />
+							</td>
+							<td height="30" align="center">*</td>
+						</tr>	
+						<tr>
+							<td height="30" align="right">Celular</td>
+							<td width="179" height="30" align="right"><input type="text" name="celular" id="celular" class="textfield" style="width:147px;"  /></td>
+							<td height="30" align="center"></td>
+						</tr>
+						<tr>
+
+							<td height="30" align="right">E-mail</td>
+							<td width="179" height="30" align="right">
+								<input type="text" name="email" id="email" class="textfield" style="width:147px;"  />								
+							</td>
+							<td height="30" align="center">*</td>
+						</tr>
+						<tr>
+							<td height="30" align="right">Actividad Actual</td>
+							<td width="179" height="30" align="right">
+								<select name="actividades" id="actividades" class="select" style="width:153px;">								
+									<option value="">Seleccione</option>;
+							<option value="3">Estudiante 3&deg; Medio</option><option value="4">Estudiante 4&deg; Medio</option><option value="5">Estudiante otra carrera</option><option value="6">Trabajando</option>								</select>
+							</td>
+							<td height="30" align="center">*</td>
+						</tr>
+						<tr>
+							<td height="30" colspan="3" align="center">Ind&iacute;canos las carreras y sedes donde te gustar&iacute;a estudiar</td>
+						</tr>
+						<tr>
+							<td height="30" align="right">Opci&oacute;n 1</td>
+							<td width="179" height="30" align="right">								
+								<select name="carrera_op_1" id="carrera_op_1" class="select" style="width:153px;" onchange="xajax_getSedesPorCarrera(this.value,1,'width:153px;')">
+					   <option value="">Seleccione Carrera</option><option value="307">Actuación</option><option value="143">Administración de Empresas Mención Marketing</option><option value="843">Administración de Empresas Mención Marketing Pev</option><option value="133">Administración de Recursos Humanos</option><option value="833">Administración de Recursos Humanos Pev</option><option value="443">Administración de Redes Computacionales</option><option value="840">Administración de Ventas Pev</option><option value="130">Administración Financiera</option><option value="830">Administración Financiera Pev</option><option value="668">Administración Hotelera</option><option value="676">Administración Turística</option><option value="447">Analista Programador Computacional</option><option value="326">Animación Digital</option><option value="142">Asistente Ejecutivo</option><option value="123">Auditoría</option><option value="129">Comercio Exterior</option><option value="829">Comercio Exterior Pev</option><option value="305">Comunicación Audiovisual</option><option value="139">Contabilidad General M Legislación Tributaria</option><option value="839">Contabilidad General M Legislación Tributaria Pev</option><option value="424">Dibujo Arquitectónico y Estructural</option><option value="679">Dirección en Administración Hotelera</option><option value="228">Diseño de Ambientes</option><option value="229">Diseño de Vestuario</option><option value="231">Diseño Gráfico</option><option value="230">Diseño Industrial</option><option value="672">Ecoturismo</option><option value="506">Fisioterapeuta Deportivo</option><option value="669">Gastronomía</option><option value="670">Gastronomía Internacional</option><option value="220">Ilustración Digital</option><option value="504">Informática Biomédica</option><option value="782">Ingeniería Agrícola</option><option value="780">Ingeniería en Acuicultura</option><option value="160">Ingeniería en Administración</option><option value="164">Ingeniería en Administración de Recursos Humanos</option><option value="864">Ingeniería en Administración de Recursos Humanos Pev</option><option value="860">Ingeniería en Administración Pev</option><option value="465">Ingeniería en Automatización de Procesos Industriales</option><option value="161">Ingeniería en Comercio Exterior</option><option value="462">Ingeniería en Conectividad y Redes</option><option value="431">Ingeniería en Construcción</option><option value="464">Ingeniería en Electricidad y Electrónica</option><option value="865">Ingeniería en Gestión Comercial Pev</option><option value="467">Ingeniería en Gestión de Tecnologías de Información</option><option value="163">Ingeniería en Gestión Logística</option><option value="461">Ingeniería en Informática</option><option value="468">Ingeniería en Infraestructura y Plataformas Tecnológicas</option><option value="470">Ingeniería en Maquinaria y Vehículos Pesados</option><option value="162">Ingeniería en Marketing</option><option value="862">Ingeniería en Marketing Pev</option><option value="463">Ingeniería en Mecánica Automotriz y Autotrónica</option><option value="781">Ingeniería en Medio Ambiente</option><option value="440">Ingeniería en Prevención de Riesgos</option><option value="325">Ingeniería en Sonido</option><option value="507">Preparador Físico</option><option value="226">Publicidad</option><option value="323">Publicidad Técnica Mención Producción Digital</option><option value="302">Relaciones Públicas Mención Marketing</option><option value="435">Restauración Patrimonial</option><option value="889">Técnico Agrícola</option><option value="322">Técnico Audiovisual</option><option value="501">Técnico de Enfermería</option><option value="502">Técnico de Laboratorio Clínico y Banco de Sangre</option><option value="503">Técnico de Radiodiagnóstico y Radioterapia</option><option value="222">Técnico en Construcción</option><option value="217">Técnico en Diseño Gráfico</option><option value="448">Técnico en Electricidad y Electrónica</option><option value="474">Técnico en Energías Renovables y Eficiencia Energética</option><option value="166">Técnico en Gestión Logística</option><option value="866">Técnico en Gestión Logística Pev</option><option value="404">Técnico en Instalaciones Eléctricas</option><option value="421">Técnico en Instrumentación y Automatización Industrial</option><option value="469">Técnico en Mantenimiento Industrial</option><option value="471">Técnico en Maquinaria y Vehículos Pesados</option><option value="418">Técnico en Mecánica Automotriz y Autotrónica</option><option value="508">Técnico en Odontología</option><option value="429">Técnico en Prevención de Riesgos Pev</option><option value="851">Técnico en Servicios Financieros y Bancarios Pev</option><option value="460">Técnico en Telecomunicaciones</option><option value="150">Técnico Jurídico</option><option value="850">Técnico Jurídico Pev</option><option value="405">Técnico Topógrafo</option><option value="890">Técnico Veterinario</option><option value="324">Tecnología en Sonido</option><option value="673">Turismo de Aventura</option><option value="677">Turismo Técnico Mención en Empresas Turísticas</option><option value="678">Turismo Técnico Mención En Servicios Aerocomerciales</option></select>							</td>
+							<td height="30" align="center">*</td>
+						</tr>
+						<tr>
+							<td height="30" align="right">&nbsp;</td>
+							<td width="179" height="30" align="right">
+								<div id="result_sedes_1"><select style="width: 153px;" class="select" id="sedes_op_1" name="sedes_op_1"><option value="">Selecciona una Sede</option></div>
+							</td>
+							<td height="30" align="center">*</td>
+						</tr>              
+						<tr>
+							<td height="30" align="right">Opci&oacute;n 2</td>
+							<td width="179" height="30" align="right">
+								<select name="carrera_op_2" id="carrera_op_2" class="select" style="width:153px;" onchange="xajax_getSedesPorCarrera(this.value,2,'width:153px;')">
+					   <option value="">Seleccione Carrera</option><option value="307">Actuación</option><option value="143">Administración de Empresas Mención Marketing</option><option value="843">Administración de Empresas Mención Marketing Pev</option><option value="133">Administración de Recursos Humanos</option><option value="833">Administración de Recursos Humanos Pev</option><option value="443">Administración de Redes Computacionales</option><option value="840">Administración de Ventas Pev</option><option value="130">Administración Financiera</option><option value="830">Administración Financiera Pev</option><option value="668">Administración Hotelera</option><option value="676">Administración Turística</option><option value="447">Analista Programador Computacional</option><option value="326">Animación Digital</option><option value="142">Asistente Ejecutivo</option><option value="123">Auditoría</option><option value="129">Comercio Exterior</option><option value="829">Comercio Exterior Pev</option><option value="305">Comunicación Audiovisual</option><option value="139">Contabilidad General M Legislación Tributaria</option><option value="839">Contabilidad General M Legislación Tributaria Pev</option><option value="424">Dibujo Arquitectónico y Estructural</option><option value="679">Dirección en Administración Hotelera</option><option value="228">Diseño de Ambientes</option><option value="229">Diseño de Vestuario</option><option value="231">Diseño Gráfico</option><option value="230">Diseño Industrial</option><option value="672">Ecoturismo</option><option value="506">Fisioterapeuta Deportivo</option><option value="669">Gastronomía</option><option value="670">Gastronomía Internacional</option><option value="220">Ilustración Digital</option><option value="504">Informática Biomédica</option><option value="782">Ingeniería Agrícola</option><option value="780">Ingeniería en Acuicultura</option><option value="160">Ingeniería en Administración</option><option value="164">Ingeniería en Administración de Recursos Humanos</option><option value="864">Ingeniería en Administración de Recursos Humanos Pev</option><option value="860">Ingeniería en Administración Pev</option><option value="465">Ingeniería en Automatización de Procesos Industriales</option><option value="161">Ingeniería en Comercio Exterior</option><option value="462">Ingeniería en Conectividad y Redes</option><option value="431">Ingeniería en Construcción</option><option value="464">Ingeniería en Electricidad y Electrónica</option><option value="865">Ingeniería en Gestión Comercial Pev</option><option value="467">Ingeniería en Gestión de Tecnologías de Información</option><option value="163">Ingeniería en Gestión Logística</option><option value="461">Ingeniería en Informática</option><option value="468">Ingeniería en Infraestructura y Plataformas Tecnológicas</option><option value="470">Ingeniería en Maquinaria y Vehículos Pesados</option><option value="162">Ingeniería en Marketing</option><option value="862">Ingeniería en Marketing Pev</option><option value="463">Ingeniería en Mecánica Automotriz y Autotrónica</option><option value="781">Ingeniería en Medio Ambiente</option><option value="440">Ingeniería en Prevención de Riesgos</option><option value="325">Ingeniería en Sonido</option><option value="507">Preparador Físico</option><option value="226">Publicidad</option><option value="323">Publicidad Técnica Mención Producción Digital</option><option value="302">Relaciones Públicas Mención Marketing</option><option value="435">Restauración Patrimonial</option><option value="889">Técnico Agrícola</option><option value="322">Técnico Audiovisual</option><option value="501">Técnico de Enfermería</option><option value="502">Técnico de Laboratorio Clínico y Banco de Sangre</option><option value="503">Técnico de Radiodiagnóstico y Radioterapia</option><option value="222">Técnico en Construcción</option><option value="217">Técnico en Diseño Gráfico</option><option value="448">Técnico en Electricidad y Electrónica</option><option value="474">Técnico en Energías Renovables y Eficiencia Energética</option><option value="166">Técnico en Gestión Logística</option><option value="866">Técnico en Gestión Logística Pev</option><option value="404">Técnico en Instalaciones Eléctricas</option><option value="421">Técnico en Instrumentación y Automatización Industrial</option><option value="469">Técnico en Mantenimiento Industrial</option><option value="471">Técnico en Maquinaria y Vehículos Pesados</option><option value="418">Técnico en Mecánica Automotriz y Autotrónica</option><option value="508">Técnico en Odontología</option><option value="429">Técnico en Prevención de Riesgos Pev</option><option value="851">Técnico en Servicios Financieros y Bancarios Pev</option><option value="460">Técnico en Telecomunicaciones</option><option value="150">Técnico Jurídico</option><option value="850">Técnico Jurídico Pev</option><option value="405">Técnico Topógrafo</option><option value="890">Técnico Veterinario</option><option value="324">Tecnología en Sonido</option><option value="673">Turismo de Aventura</option><option value="677">Turismo Técnico Mención en Empresas Turísticas</option><option value="678">Turismo Técnico Mención En Servicios Aerocomerciales</option></select>							</td>
+							<td height="30" align="center">&nbsp;</td>
+						</tr>
+						<tr>
+							<td height="30" align="right">&nbsp;</td>
+							<td width="179" height="30" align="right">
+								<div id="result_sedes_2"><select style="width: 153px;" class="select" id="sedes_op_2" name="sedes_op_2"><option value="">Selecciona una Sede</option></div>
+							</td>
+							<td height="30" align="center">&nbsp;</td>
+						</tr>              
+						<tr>
+							<td height="30" align="right">Opci&oacute;n 3</td>
+							<td width="179" height="30" align="right">
+								<select name="carrera_op_3" id="carrera_op_3" class="select" style="width:153px;" onchange="xajax_getSedesPorCarrera(this.value,3,'width:153px;')">
+					   <option value="">Seleccione Carrera</option><option value="307">Actuación</option><option value="143">Administración de Empresas Mención Marketing</option><option value="843">Administración de Empresas Mención Marketing Pev</option><option value="133">Administración de Recursos Humanos</option><option value="833">Administración de Recursos Humanos Pev</option><option value="443">Administración de Redes Computacionales</option><option value="840">Administración de Ventas Pev</option><option value="130">Administración Financiera</option><option value="830">Administración Financiera Pev</option><option value="668">Administración Hotelera</option><option value="676">Administración Turística</option><option value="447">Analista Programador Computacional</option><option value="326">Animación Digital</option><option value="142">Asistente Ejecutivo</option><option value="123">Auditoría</option><option value="129">Comercio Exterior</option><option value="829">Comercio Exterior Pev</option><option value="305">Comunicación Audiovisual</option><option value="139">Contabilidad General M Legislación Tributaria</option><option value="839">Contabilidad General M Legislación Tributaria Pev</option><option value="424">Dibujo Arquitectónico y Estructural</option><option value="679">Dirección en Administración Hotelera</option><option value="228">Diseño de Ambientes</option><option value="229">Diseño de Vestuario</option><option value="231">Diseño Gráfico</option><option value="230">Diseño Industrial</option><option value="672">Ecoturismo</option><option value="506">Fisioterapeuta Deportivo</option><option value="669">Gastronomía</option><option value="670">Gastronomía Internacional</option><option value="220">Ilustración Digital</option><option value="504">Informática Biomédica</option><option value="782">Ingeniería Agrícola</option><option value="780">Ingeniería en Acuicultura</option><option value="160">Ingeniería en Administración</option><option value="164">Ingeniería en Administración de Recursos Humanos</option><option value="864">Ingeniería en Administración de Recursos Humanos Pev</option><option value="860">Ingeniería en Administración Pev</option><option value="465">Ingeniería en Automatización de Procesos Industriales</option><option value="161">Ingeniería en Comercio Exterior</option><option value="462">Ingeniería en Conectividad y Redes</option><option value="431">Ingeniería en Construcción</option><option value="464">Ingeniería en Electricidad y Electrónica</option><option value="865">Ingeniería en Gestión Comercial Pev</option><option value="467">Ingeniería en Gestión de Tecnologías de Información</option><option value="163">Ingeniería en Gestión Logística</option><option value="461">Ingeniería en Informática</option><option value="468">Ingeniería en Infraestructura y Plataformas Tecnológicas</option><option value="470">Ingeniería en Maquinaria y Vehículos Pesados</option><option value="162">Ingeniería en Marketing</option><option value="862">Ingeniería en Marketing Pev</option><option value="463">Ingeniería en Mecánica Automotriz y Autotrónica</option><option value="781">Ingeniería en Medio Ambiente</option><option value="440">Ingeniería en Prevención de Riesgos</option><option value="325">Ingeniería en Sonido</option><option value="507">Preparador Físico</option><option value="226">Publicidad</option><option value="323">Publicidad Técnica Mención Producción Digital</option><option value="302">Relaciones Públicas Mención Marketing</option><option value="435">Restauración Patrimonial</option><option value="889">Técnico Agrícola</option><option value="322">Técnico Audiovisual</option><option value="501">Técnico de Enfermería</option><option value="502">Técnico de Laboratorio Clínico y Banco de Sangre</option><option value="503">Técnico de Radiodiagnóstico y Radioterapia</option><option value="222">Técnico en Construcción</option><option value="217">Técnico en Diseño Gráfico</option><option value="448">Técnico en Electricidad y Electrónica</option><option value="474">Técnico en Energías Renovables y Eficiencia Energética</option><option value="166">Técnico en Gestión Logística</option><option value="866">Técnico en Gestión Logística Pev</option><option value="404">Técnico en Instalaciones Eléctricas</option><option value="421">Técnico en Instrumentación y Automatización Industrial</option><option value="469">Técnico en Mantenimiento Industrial</option><option value="471">Técnico en Maquinaria y Vehículos Pesados</option><option value="418">Técnico en Mecánica Automotriz y Autotrónica</option><option value="508">Técnico en Odontología</option><option value="429">Técnico en Prevención de Riesgos Pev</option><option value="851">Técnico en Servicios Financieros y Bancarios Pev</option><option value="460">Técnico en Telecomunicaciones</option><option value="150">Técnico Jurídico</option><option value="850">Técnico Jurídico Pev</option><option value="405">Técnico Topógrafo</option><option value="890">Técnico Veterinario</option><option value="324">Tecnología en Sonido</option><option value="673">Turismo de Aventura</option><option value="677">Turismo Técnico Mención en Empresas Turísticas</option><option value="678">Turismo Técnico Mención En Servicios Aerocomerciales</option></select>							</td>
+							<td height="30" align="center">&nbsp;</td>
+						</tr>              
+						<tr>
+							<td height="30" align="right">&nbsp;</td>
+							<td width="179" height="30" align="right">
+								<div id="result_sedes_3"><select style="width: 153px;" class="select" id="sedes_op_3" name="sedes_op_3"><option value="">Selecciona una Sede</option></div>
+							</td>
+							<td height="30" align="center">&nbsp;</td>
+						</tr> 
+						<tr>
+							<td height="30" colspan="3" align="center">Quiero recibir informaci&oacute;n en mi:</td>
+						</tr>      
+						<tr>
+							<td height="30" colspan="3" align="center">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td width="34%" height="25" align="right">E-mail</td>
+										<td width="3%" align="right">&nbsp;</td>
+										<td width="10%" height="25"><input type="checkbox" name="chkemail" id="chkemail" value="0" onclick="if (this.value == 0){ this.value=1;} else {this.value=0;}" /><label for="checkbox"></label></td>
+										<td width="22%" height="25" align="right">Celular</td>
+										<td width="2%" align="right">&nbsp;</td>
+										<td width="29%" height="25"><input type="checkbox" name="chkcelular" id="chkcelular" value="0" onclick="if (this.value == 0){ this.value=1;} else {this.value=0;}" /><label for="checkbox"></label></td>
+									</tr>
+									<tr>
+										<td height="30" colspan="6" align="center" valign="bottom">											
+											<div id="btloader"><center><img src="templates/home_portal/images/solicita.jpg" alt="Solicita Informaci&oacute;n" width="146" height="18" border="0" style="cursor:pointer;" onclick="envia_form()" /></center></div>
+											<div id="imgloader" style="display:none"><center><img src="templates/home_portal/images/ajax-loader.gif"></center></div>										
+									</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="moduletable_form" id="modulo_mensaje" style="display:none"></div>			
+			<input type="hidden" name="tipo_solicitud"  value="92" />			
+		</form>
+	</body>
+</html>
+
+</body>
+</html>
