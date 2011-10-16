@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es-es" dir="ltr" >
 
   <head>
@@ -206,7 +206,7 @@
       <div class="contenedor_int">
         <div class="header">
           <div class="moduletable_funcional_admision">
-            <ul class="menu"><li class="item118"><a href="registrese.html?option=com_registrate&amp;view=registrate&amp;keepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Regístrate" class="thickbox"><span>Regístrate</span></a></li><li class="item116"><a href="contacto.php"><span>Contacto</span></a></li><li class="item119"><a href="mapa-del-sitio.html"><span>Mapa del Sitio</span></a></li></ul>		</div>
+            <ul class="menu"><li class="item118"><a href="registrese.php?option=com_registrate&amp;view=registrate&amp;keepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Regístrate" class="thickbox"><span>Regístrate</span></a></li><li class="item116"><a href="contacto.php"><span>Contacto</span></a></li><li class="item119"><a href="mapa-del-sitio.html"><span>Mapa del Sitio</span></a></li></ul>		</div>
 
           <div class="borrado"></div>
           <div class="moduletable">
@@ -214,13 +214,13 @@
 
             <div class="moduletable_menu">
               <ul>
-                <li><a href='http://www.duoc.cl/'>Inicio</a></li><li><a href='index.html' class='active' >Admisión</a></li><li><a href='http://portal.duoc.cl'>Alumnos</a></li><li><a href='http://exalumnos.duoc.cl/portal/index.php'>Ex Alumnos</a></li>	</ul>
+                <li><a href='http://www.duoc.cl/'>Inicio</a></li><li><a href='index.php' class='active' >Admisión</a></li><li><a href='http://portal.duoc.cl'>Alumnos</a></li><li><a href='http://exalumnos.duoc.cl/portal/index.php'>Ex Alumnos</a></li>	</ul>
             </div>
           </div>
 
           <div class="moduletable">
             <div class="logo">
-              <h1><a href="index.html"><span>DUOC UC</span></a></h1>
+              <h1><a href="index.php"><span>DUOC UC</span></a></h1>
             </div>		</div>
 
           <div class="titulos">
@@ -376,6 +376,13 @@
             <script type="text/javascript">
 
             </script>
+            
+            <script type="text/javascript">
+            var RecaptchaOptions = {
+               lang : 'es'
+            };
+            </script>
+            
             <form action="#" method="post" name="commentForm" id="commentForm" >
               <div class="moduletable_form" id="modulo_form">
                 <div id="form_1">
@@ -625,7 +632,7 @@
 					</div>
                 </div>
 
-                <div id="form_3" style="display:none">
+                <div id="form_3" style="display:none;">
                   <div class="tit">Regístrate para obtener más información sobre Duoc UC y sus carreras</div>
                   <div class="pasos">
                     <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
@@ -640,7 +647,7 @@
                   </div>
                   <div class="campos">
 
-                    <div class="campos_uno">
+<!--                    <div class="campos_uno">
                       <table style="width: 121px;" border="0" cellpadding="0" cellspacing="0">
                         <tbody>
                           <tr>
@@ -660,28 +667,31 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>
+                    </div>-->
+                    <?php
+                      require_once('./includes/ReCaptcha/recaptchalib.php');
+                      $publickey = "6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr";
+                      echo recaptcha_get_html($publickey);
+                    ?>
                     <div class="borrado"></div>
 	                </div>
 	                <br/>
 					<br/>
 					<br/>
 					<br/>
+                                        <br/>
+					<br/>
+					<br/>
+                                        
 					<div class="btn_tres">
 						<div id="btloader">
+                                                  <center>
 							<img
 								src="templates/home_portal/images/solicitar_info.jpg"
 								alt="Avanzar &gt;&gt;" width="137" height="18" border="0"
 								style="cursor: pointer;" onclick="envia_form();" />
+                                                  </center>
 						</div>
-						<span spry:region="dsSuscripcion">
-							<div id="imgloader" spry:state="loading">
-								<center>
-									<img src="templates/home_portal/images/ajax-loader.gif"
-										width="20" height="20">
-								</center>
-							</div>
-						</span>
 					</div>
                 </div>
               </div>

@@ -81,7 +81,7 @@ window.addEvent('domready', function() {new AppliqueStyles($E('#moomenuCK'),{moo
 			<div class="contenedor_int">
 				<div class="header">
 							<div class="moduletable_funcional_admision">
-					<ul class="menu"><li class="item118"><a href="registrese.html?option=com_registrate&amp;view=registrate&amp;keepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Reg&iacute;strate" class="thickbox"><span>Reg&iacute;strate</span></a></li><li id="current" class="active item116"><a href="admision/contacto.html"><span>Contacto</span></a></li><li class="item119"><a href="mapa-del-sitio.html"><span>Mapa del Sitio</span></a></li></ul>		</div>
+					<ul class="menu"><li class="item118"><a href="registrese.php?option=com_registrate&amp;view=registrate&amp;keepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Reg&iacute;strate" class="thickbox"><span>Reg&iacute;strate</span></a></li><li id="current" class="active item116"><a href="admision/contacto.html"><span>Contacto</span></a></li><li class="item119"><a href="mapa-del-sitio.html"><span>Mapa del Sitio</span></a></li></ul>		</div>
 
 	
 					<div class="borrado"></div>
@@ -92,7 +92,7 @@ window.addEvent('domready', function() {new AppliqueStyles($E('#moomenuCK'),{moo
 	<ul>
 	<li>
 	<a href='http://www.duoc.cl/'>Inicio</a></li><li>
-	<a href='/admision/index.html' class='active' >Admisi&oacute;n</a></li>
+	<a href='/admision/index.php' class='active' >Admisi&oacute;n</a></li>
 	<li><a href='http://portal.duoc.cl'>Alumnos</a></li><li><a href='http://exalumnos.duoc.cl/portal/index.php'>Ex Alumnos</a></li>	</ul>
 </div>
 		</div>
@@ -100,7 +100,7 @@ window.addEvent('domready', function() {new AppliqueStyles($E('#moomenuCK'),{moo
 	 
 							<div class="moduletable">
 					<div class="logo">
-<h1><a href="admision/index.html"><span>DUOC UC</span></a></h1>
+<h1><a href="admision/index.php"><span>DUOC UC</span></a></h1>
 </div>		</div>
 	 
 					<div class="titulos">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es-es" dir="ltr" >
 
   <head>
@@ -30,13 +30,6 @@
 
     <script type="text/javascript">
       var dsCap = new Spry.Data.XMLDataSet(null, "RESULT");
-		
-      function validaCap(){
-        var a = document.getElementById("j_captcha_response").value;
-        var sUrl = "/admision/contacto.do?accion=validaCaptcha&j_captcha_response=" + a + "&ms" + new Date().getTime();
-        dsCap.setURL(sUrl)
-        dsCap.loadData();
-      }
 		
       window.addEvent('domready', function() {
 
@@ -83,7 +76,7 @@
       <div class="contenedor_int">
         <div class="header">
           <div class="moduletable_funcional_admision">
-            <ul class="menu"><li class="item118"><a href="registrese.html?option=com_registrate&amp;view=registrate&amp;keepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Regístrate" class="thickbox"><span>Regístrate</span></a></li><li id="current" class="active item116"><a href="contacto.php"><span>Contacto</span></a></li><li class="item119"><a href="mapa-del-sitio.html"><span>Mapa del Sitio</span></a></li></ul>		</div>
+            <ul class="menu"><li class="item118"><a href="registrese.php?option=com_registrate&amp;view=registrate&amp;keepThis=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Regístrate" class="thickbox"><span>Regístrate</span></a></li><li id="current" class="active item116"><a href="contacto.php"><span>Contacto</span></a></li><li class="item119"><a href="mapa-del-sitio.html"><span>Mapa del Sitio</span></a></li></ul>		</div>
 
           <div class="borrado"></div>
           <div class="moduletable">
@@ -91,13 +84,13 @@
 
             <div class="moduletable_menu">
               <ul>
-                <li><a href='http://www.duoc.cl/'>Inicio</a></li><li><a href='index.html' class='active' >Admisión</a></li><li><a href='http://portal.duoc.cl'>Alumnos</a></li><li><a href='http://exalumnos.duoc.cl/portal/index.php'>Ex Alumnos</a></li>	</ul>
+                <li><a href='http://www.duoc.cl/'>Inicio</a></li><li><a href='index.php' class='active' >Admisión</a></li><li><a href='http://portal.duoc.cl'>Alumnos</a></li><li><a href='http://exalumnos.duoc.cl/portal/index.php'>Ex Alumnos</a></li>	</ul>
             </div>
           </div>
 
           <div class="moduletable">
             <div class="logo">
-              <h1><a href="index.html"><span>DUOC UC</span></a></h1>
+              <h1><a href="index.php"><span>DUOC UC</span></a></h1>
             </div>		</div>
 
           <div class="titulos">
@@ -248,6 +241,11 @@
                 //document.getElementById('frmdatos').target 	= "";
                 //document.getElementById('frmdatos').enctype = "";
               }		
+            </script>
+            <script type="text/javascript">
+            var RecaptchaOptions = {
+               lang : 'es'
+            };
             </script>
             <form name="frmdatos" id="frmdatos" method="post" action="processContact.php">
               <div class="titulo">Contacto</div>

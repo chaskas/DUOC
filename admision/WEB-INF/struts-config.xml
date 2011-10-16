@@ -37,7 +37,7 @@
         name="resultado_contacto"
         path="/resultado_contacto.jsp"
         redirect="true" />
-      <forward name="inicio" path="/index.html" />
+      <forward name="inicio" path="/index.php" />
     </action>
 
   </action-mappings>

@@ -43,7 +43,7 @@
 	<div class="moduletable">
 		<div class="logo">
 			<h1>
-				<a href="/admision/index.html"><span>DUOC UC</span>
+				<a href="/admision/index.php"><span>DUOC UC</span>
 				</a>
 			</h1>
 		</div>
