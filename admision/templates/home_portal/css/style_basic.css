@@ -231,3 +231,20 @@ form { margin:0; padding:0;}
 #mundos_sedes { border:1px solid #8FADC6; color:#666666; font-size:12px; margin:0; padding:1px; width:160px; }
 #mundos_temas { border:1px solid #8FADC6; color:#666666; font-size:12px; margin:0; padding:1px; width:160px; }
 #mundos { border:1px solid #8FADC6; color:#666666; font-size:12px; margin:0; padding:1px; width:160px; }
+
+    #recaptcha_image,
+    #recaptcha_image img 
+    {
+        width: 200px !important;
+        cursor: pointer;
+    }
+    #recaptcha_image img:hover
+    {
+        position: absolute;
+        width: 300px !important;
+    }
+    .recaptcha_only_if_image,
+    .recaptcha_only_if_audio
+    {
+        display: block;
+    }

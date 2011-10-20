@@ -1,10 +1,7 @@
 <?php
-  require_once('./includes/ReCaptcha/recaptchalib.php');
-  $privatekey = "6LeCKckSAAAAALT3EOByDZqsg5AvxGhVsbU7oK2O";
-  $resp = recaptcha_check_answer ($privatekey,
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
+require_once('./includes/ReCaptcha/recaptchalib.php');
+$privatekey = "6LeCKckSAAAAALT3EOByDZqsg5AvxGhVsbU7oK2O";
+$resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -244,9 +241,76 @@
 
             <?php else : ?>
 
-                "Muy bien"
+              <?php
+              $nombres = $_POST['nombres'];
+              $apellidos = $_POST['apellidos'];
+              $rut = $_POST['rut'];
+              $email = $_POST['email'];
+              $asunto = $_POST['asunto'];
+              $mensaje = $_POST['mensaje'];
 
-            <?php endif; ?>				
+              require_once './includes/Swift-4.1.2/lib/swift_required.php';
+
+              $transport = Swift_SmtpTransport::newInstance('localhost', 25);
+
+              //Create the Mailer using your created Transport
+              $mailer = Swift_Mailer::newInstance($transport);
+
+              //Create a message
+              $message = Swift_Message::newInstance()
+                      ->setSubject("Nuevo Contacto")
+                      ->setFrom(array($email => $nombres . " " . $apellidos))
+                      ->setTo(array('fgonpala@gmail.com' => 'Admin DUOC'))
+                      ->setBody(
+                      '<p>Enviando nuevo contacto :</p>' .
+                      '<p>Nombre : ' . $nombres . '<br />Apellido: ' . $apellidos . '<br />Rut:' . $rut . '<br />E-Mail: ' . $email . '</p>' .
+                      '<hr /><p>Comentario: ' . $mensaje . '</p>'
+                      , 'text/html')
+              ;
+
+              $headers = $message->getHeaders();
+              $headers->addTextHeader('Organization', 'Duoc UC');
+              $headers->addTextHeader('Reply-To', $nombres . ' <' . $email . '>');
+              $headers->addTextHeader('From', $nombres . " " . $apellidos . ' <' . $email . '>');
+              $headers->addTextHeader('X-Mailer', 'SwiftMailer v4.0.6');
+
+
+              if (!$mailer->send($message, $failures)) {
+                echo "Failures:";
+                print_r($failures);
+              }
+              ?>
+              <table style="border-collapse: collapse; height: 209px; width: 665px;" border="0" cellspacing="0" cellpadding="0" align="center">
+                <tbody>
+                  <tr>
+                    <td>
+                      <table style="border-collapse: collapse; width: 470px;" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tbody>
+                          <tr>
+                            <td height="174">
+                              <table style="border-collapse: collapse; width: 377px;" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tbody>
+                                  <tr>
+                                    <td style="text-align: center; font-family: Arial,Helvetica,sans-serif; color: #666666;" width="377">		 
+                                      <logic:equal name="contactoForm" property="status" value="OK">
+                                        <img src="referido/mail/images/icon_thanks.jpg" border="0" width="128" height="128" /><br />
+                                        <strong>La informaci&oacute;n ha sido enviada.</strong><br/> 
+                                        <span style="font-size: 12px;">Gracias por visitar DuocUC.cl</span>		
+                                      </logic:equal>	
+                                    </td>
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          <?php endif; ?>				
           </div>	
           <div class="sidebar_right">
             <div class="moduletable_banners">					

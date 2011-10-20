@@ -22,7 +22,7 @@ form { margin:0; padding:0;}
 #contenedor_general .contenedor_int .slider_menu .moduletable_menu ul li a:hover{ color:#646b97; text-decoration:none; }
 
 /*:::: CENTRO::::*/
-#contenedor_general .contenedor_int .centro { margin:0 0 0 9px; padding:7px 0 0 0; width:974px; height:332px; }
+#contenedor_general .contenedor_int { margin:0 0 0 9px; padding:7px 0 0 0; width:974px; height:332px; }
 
 /*:::: FORM::::*/
 #contenedor_general .contenedor_int .centro .moduletable_form { float:left; margin:0; padding:0; width:275px; height:332px; background-image: url(../images/bg_form.jpg); background-repeat:no-repeat; }
@@ -60,7 +60,7 @@ form { margin:0; padding:0;}
 #contenedor_general .contenedor_int .centro .moduletable_banner { float:left; margin:0 0 0 3px; padding:0; width:255px; height:80px;}
 
 /*:::: MODULOS::::*/
-#contenedor_general .contenedor_int .centro .modulos { float:left; margin:0px 0 0 3px; padding:0; width:696px; height:247px; background-image:url(../images/bg_modulos.jpg); background-repeat:no-repeat; border-bottom:#CCC 1px dotted; }
+#contenedor_general .contenedor_int .centro .modulos { float:left; margin:4px 0 0 0px; padding:0; width:435px; height:247px; border-bottom:#CCC 1px dotted; }
 
 /*:::: PORQUE ::::*/
 #contenedor_general .contenedor_int .centro .modulos .moduletable_porque { float:left; margin:0 3px 0 0; padding:0; width:219px; height:247px; }
@@ -515,3 +515,38 @@ form { margin:0; padding:0;}
 .campo_tres_40_carreras_cinco {background-color: #F2F2F2;color: #626262;float: left;font-family: Arial,Helvetica,sans-serif;font-size: 12px;margin: 0;padding: 16px 0 5px 6px;text-align: left;width: 134px;}
 /*.campo_tres_40_carreras_cinco {background-color: #F2F2F2;color: #626262;float: left;font-family: Arial,Helvetica,sans-serif;font-size: 12px;height: 47px;margin: 0;padding: 16px 0 5px 6px;text-align: left;width: 134px;}*/
 .campo_dos_40_carreras_punteado {   background-color: #FFFFFF;font-family: Arial,Helvetica,sans-serif; font-size: 12px; margin: 0; padding: 0;/* width: 590px;*/border-bottom: 1px dotted #999999;}
+
+
+/* Estilos modificados Admisión 2012*/
+
+
+.moduletable_menu-inicio {
+	float:right;
+	width:256px;
+	height:514px;
+	padding:5px 3px 0 0;
+	*padding:0;
+}
+
+.slider_menu-inicio {
+	width:721px;
+	height:182px;
+	padding:5px 0 0 8px;
+}
+
+.moduletable_buscador-inicio {
+	float:left;
+}
+
+.moduletable-inicio {
+	padding:5px 0 0 8px;
+}
+
+#contenedor_general .contenedor_int .tres_columnas .content-colegios { float:left; margin:0; padding:0 0 0 11px ; width:800px; }
+
+#contenedor_general .contenedor_int .tres_columnas .content-colegios .contenido { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#777777; }
+
+.recaptcha {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}

@@ -1,0 +1,393 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+#general{
+	width:785px;
+}
+
+#colegio{
+	width:540px;
+	float:left;
+}
+
+#colegio a{
+	color:#000;
+	text-decoration:none;
+}
+
+#colegio a:hover{
+	color:#666;
+	text-decoration:underline;
+}
+
+.video{
+	padding:4px;
+	border:1px solid #ddd;
+}
+
+.video p{
+	padding:5px 0 0 0;
+	text-align:center;
+	font-size:12px;
+}
+
+.cuadros{
+	margin-top:10px;
+	width:530px;
+	padding:4px;
+	border:1px solid #ddd;
+}
+
+.cuadros p{
+	padding:5px 0 0 0;
+	text-align:center;
+	font-size:12px;
+}
+
+.cuadros h2 { margin:0; padding:5px 8px 0; width:514px; height:24px; border-bottom:#D9D9D9 1px solid; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#181f31; font-weight:bold; background-image:url(../images/bg_tit_blocks.jpg); background-repeat:repeat-y; background-position:right;}
+
+#sidebar{
+	width:235px;
+	float:right;
+}
+
+.sidebar-interior a{
+	float:right;
+	color:#000;
+	text-decoration:none;
+}
+
+.sidebar-interior a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+
+
+#sidebar h3{
+	margin:0;
+	padding:0;
+	color:#333;
+}
+
+.sidebar-interior{
+	float:right;
+	width:222px;
+	padding:0;
+	color:#444;
+	border: 1px solid #ddd;
+	padding: 0 0 14px 0;
+	margin-top:14px;
+}
+
+.question{
+	padding:0 14px 7px 14px;
+}
+
+/* ESTILOS ESCUELAS */
+
+
+.sidebar-escuelas{
+	float:right;
+	width:222px;
+	padding:0;
+	color:#fff;
+	border: 1px solid #ddd;
+	padding: 0;
+	margin:0 0 10px 0;
+}
+
+.esc-adm { margin:0;}
+
+.esc-adm a{
+	padding:5px;
+	background-color:#642580;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-adm a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-construccion { margin:0;}
+
+.esc-construccion a{
+	padding:5px;
+	background-color:#ed771a;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-construccion a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-comunicacion { margin:0;}
+
+.esc-comunicacion a{
+	padding:5px;
+	background-color:#ce0040;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-comunicacion a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-diseno { margin:0;}
+
+.esc-diseno a{
+	padding:5px;
+	background-color:#cdd522;
+	color:#333;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-diseno a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-ing { margin:0;}
+
+.esc-ing a{
+	padding:5px;
+	background-color:#003d7f;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-ing a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-inf { margin:0;}
+
+.esc-inf a{
+	padding:5px;
+	background-color:#848e97;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-inf a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-rrnn { margin:0;}
+
+.esc-rrnn a{
+	padding:5px;
+	background-color:#007d45;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-rrnn a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-salud { margin:0;}
+
+.esc-salud a{
+	padding:5px;
+	background-color:#00a9e3;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-salud a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.esc-turismo { margin:0;}
+
+.esc-turismo a{
+	padding:5px;
+	background-color:#0098af;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	margin:1px;
+}
+
+.esc-turismo a:hover{
+	padding:5px;
+	background-color:#000;
+	color:#FFF;
+	text-decoration:none;
+}
+
+
+/* ESTILOS MODULOS */
+
+#modulos{
+	width:437px;
+	height:237px;
+	background:url(../images/bg-modulos.jpg);
+
+}
+
+#modulos ul{
+	list-style:none;
+	line-height:180%;
+	margin-left:-25px;
+	padding-top:10px;
+
+}
+
+#modulos li{
+	background-image:url(../images/check.png);
+	background-repeat:no-repeat;
+	background-position:0;
+	padding:10px 25px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#modulos li a{
+	color:#333;
+	text-decoration:none;
+}
+
+#modulos li a:hover{
+	color:#333;
+	text-decoration:underline;
+}
+
+#modulos h2{
+	font-size:14px;
+	margin:10px 0;
+	padding:0 10px;
+}
+
+#info-general{
+	width:200px;
+	height:200px;
+	float:left;
+}
+
+#info-colegios{
+	width:217px;
+	height:200px;
+	float:right;
+}
+
+#info-colegios img{
+	padding:10px 0 0 5px;
+}
+
+
+/* ESTILOS NOTICIAS */
+
+#noticias{
+	width:236px;
+	padding:0 10px;
+}
+
+#noticias h2{
+	margin:0;
+	padding:10px 0 0 0 ;
+}
+
+#noticias h3{
+	margin:0;
+	padding:0;
+}
+
+#noticias p{
+	margin:5px 0 0 0;
+	padding:0;
+}
+
+#noticias a{
+	color:#333;
+	text-decoration:none;
+}
+
+#noticias a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+
+.not{
+	float:left;
+	width:230px;
+	border-bottom:1px dotted #ddd;
+	padding:10px 0;
+
+}
+
+.foto-not{
+	float:left;
+	padding:2px;
+	border:1px solid #ddd;
+
+}
+
+.cont-not{
+	float:right;
+	width:140px;
+	padding-left:10px;
+
+}
+
+.vermas{
+	float:right;
+	margin:10px;
+	padding:2px 5px;
+	background-color:#FC0;
+	color:#FFF;
+	border:1px solid #F90;
+}
+
+.social{
+	margin:10px 20px;
+

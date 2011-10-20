@@ -24,109 +24,105 @@
     <script type="text/javascript" src="media/system/js/caption.js"></script>
     <script type="text/javascript" src="modules/mod_moomenu_CK/assets/moomenuhCK.js"></script>
 
-    <!--<script language="JavaScript" type="text/javascript" src="js/includes/xpath.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/includes/SpryData.js"></script>-->
+    <script language="JavaScript" type="text/javascript" src="js/includes/xpath.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/includes/SpryData.js"></script>
 
 
     <script type="text/javascript">
-      /*
+      
 
-    var dsEscuelas = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obtenerEscuelas&ms" + new Date().getTime(), "ResultElement/listaElementos");
-		var dsCarreras = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obtenerCarreras", "ResultElement/listaElementos");
+//    var dsEscuelas = new Spry.Data.XMLDataSet("./carreras.php", "ResultElement/listaElementos");
+                var dsCarreras = new Spry.Data.XMLDataSet("./carreras.php", "ResultElement/listaElementos");
 
-		var dsCarrerasSusc = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obtenerCarrerasElement&op1=1", "ResultElement/listaElementos");
-		var dsSedes1 = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obteneSedesElement&op1=1", "ResultElement/listaElementos");
-		var dsSedes2 = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obteneSedesElement&op1=1", "ResultElement/listaElementos");
-		var dsSedes3 = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obteneSedesElement&op1=1", "ResultElement/listaElementos");
+                var dsCarrerasSusc = new Spry.Data.XMLDataSet("./carreras.php", "ResultElement/listaElementos");
+                var dsSedes1 = new Spry.Data.XMLDataSet("./sedes.php?idCarrera=1", "ResultElement/listaElementos");
+                var dsSedes2 = new Spry.Data.XMLDataSet("./sedes.php?idCarrera=1", "ResultElement/listaElementos");
+                var dsSedes3 = new Spry.Data.XMLDataSet("./sedes.php?idCarrera=1", "ResultElement/listaElementos");
 
-		var dsSuscripcion = new Spry.Data.XMLDataSet(null, "RESULT");
-		function enviarSuscripcion(){
-			var rut = document.getElementById("rut").value;
-			var nombre = document.getElementById("nombre").value;
-			var ap_paterno = document.getElementById("ap_paterno").value;
-			var ap_materno = document.getElementById("ap_materno").value;
-			var email = document.getElementById("email").value;
-			var celular = document.getElementById("celular").value;
-			var cap = document.getElementById("j_captcha_response").value;
+                var dsSuscripcion = new Spry.Data.XMLDataSet(null, "RESULT");
+                function enviarSuscripcion(){
+                        var rut = document.getElementById("rut").value;
+                        var nombre = document.getElementById("nombre").value;
+                        var ap_paterno = document.getElementById("ap_paterno").value;
+                        var ap_materno = document.getElementById("ap_materno").value;
+                        var email = document.getElementById("email").value;
+                        var celular = document.getElementById("celular").value;
+                        var tipo_solicitud = document.getElementById("tipo_solicitud").value;
+                        var carrera_op_1 = document.getElementById("carrera_op_1").value;
+                        var carrera_op_2 = document.getElementById("carrera_op_2").value;
+                        var carrera_op_3 = document.getElementById("carrera_op_3").value;
+                        var sedes_op_1 = document.getElementById("sedes_op_1").value;
+                        var sedes_op_2 = document.getElementById("sedes_op_2").value;
+                        var sedes_op_3 = document.getElementById("sedes_op_3").value;
+                        var actividades = document.getElementById("actividades").value;
 
-			var tipo_solicitud = document.getElementById("tipo_solicitud").value;
-			var carrera_op_1 = document.getElementById("carrera_op_1").value;
-			var carrera_op_2 = document.getElementById("carrera_op_2").value;
-			var carrera_op_3 = document.getElementById("carrera_op_3").value;
-			var sedes_op_1 = document.getElementById("sedes_op_1").value;
-			var sedes_op_2 = document.getElementById("sedes_op_2").value;
-			var sedes_op_3 = document.getElementById("sedes_op_3").value;
-			var actividades = document.getElementById("actividades").value;
+                        var sParams  = "rut=" + rut + "&nombre=" + nombre + "&ap_paterno=" + ap_paterno + "&ap_materno=" + ap_materno;
+                        sParams  = sParams + "&email=" + email + "&celular=" + celular + "&tipo_solicitud=" + tipo_solicitud + "&carrera_op_1=" + carrera_op_1;
+                        sParams  = sParams + "&carrera_op_2=" + carrera_op_2 + "&carrera_op_3=" + carrera_op_3 + "&sedes_op_1=" + sedes_op_1 + "&sedes_op_2=" + sedes_op_2;
+                        sParams  = sParams + "&sedes_op_3=" + sedes_op_3 + "&actividades=" + actividades;
 
-			var sParams  = "rut=" + rut + "&nombre=" + nombre + "&ap_paterno=" + ap_paterno + "&ap_materno=" + ap_materno;
-			sParams  = sParams + "&email=" + email + "&celular=" + celular + "&tipo_solicitud=" + tipo_solicitud + "&carrera_op_1=" + carrera_op_1;
-			sParams  = sParams + "&carrera_op_2=" + carrera_op_2 + "&carrera_op_3=" + carrera_op_3 + "&sedes_op_1=" + sedes_op_1 + "&sedes_op_2=" + sedes_op_2;
-			sParams  = sParams + "&sedes_op_3=" + sedes_op_3 + "&actividades=" + actividades + "&j_captcha_response=" + cap;
+                        var sUrl = "./processFormIndex.php?" + sParams;
+                        dsSuscripcion.setURL(sUrl);
+                        dsSuscripcion.loadData();
+                        document.getElementById("btloader").style.display = 'none';
+                }
 
-			var sUrl = "/admision/carreras.do?accion=enviarSuscripcion&" + sParams + "&ms" + new Date().getTime();
-			dsSuscripcion.setURL(sUrl);
-			dsSuscripcion.loadData();
-			document.getElementById("btloader").style.display = 'none';
-		}
+                function cargarCarreras(){
+                        var idEscuela = document.getElementById("id_escuela").value;
+                var sUrl = "./carreras.php";
+                dsCarreras.setURL(sUrl)
+                dsCarreras.loadData();
+                }
 
-		function cargarCarreras(){
-			var idEscuela = document.getElementById("id_escuela").value;
-	    	var sUrl = "/admision/carreras.do?accion=obtenerCarreras&idEscuela=" + idEscuela + "&ms" + new Date().getTime();
-	    	dsCarreras.setURL(sUrl)
-	    	dsCarreras.loadData();
-		}
+                function cargarSedes1(){
+                        var idCarrera = document.getElementById("carrera_op_1").value;
+                var sUrl = "./sedes.php?idCarrera=" + idCarrera;
+                dsSedes1.setURL(sUrl)
+                dsSedes1.loadData();
+                }
+                function cargarSedes2(){
+                        var idCarrera = document.getElementById("carrera_op_2").value;
+                var sUrl = "./sedes.php?idCarrera=" + idCarrera;
+                dsSedes2.setURL(sUrl)
+                dsSedes2.loadData();
+                }
+                function cargarSedes3(){
+                        var idCarrera = document.getElementById("carrera_op_3").value;
+                var sUrl = "./sedes.php?idCarrera=" + idCarrera;
+                dsSedes3.setURL(sUrl)
+                dsSedes3.loadData();
+                }
 
-		function cargarSedes1(){
-			var idCarrera = document.getElementById("carrera_op_1").value;
-	    	var sUrl = "/admision/carreras.do?accion=obteneSedesElement&idCarrera=" + idCarrera + "&op1=1&ms" + new Date().getTime();
-	    	dsSedes1.setURL(sUrl)
-	    	dsSedes1.loadData();
-		}
-		function cargarSedes2(){
-			var idCarrera = document.getElementById("carrera_op_2").value;
-	    	var sUrl = "/admision/carreras.do?accion=obteneSedesElement&idCarrera=" + idCarrera + "&op1=1&ms" + new Date().getTime();
-	    	dsSedes2.setURL(sUrl)
-	    	dsSedes2.loadData();
-		}
-		function cargarSedes3(){
-			var idCarrera = document.getElementById("carrera_op_3").value;
-	    	var sUrl = "/admision/carreras.do?accion=obteneSedesElement&idCarrera=" + idCarrera + "&op1=1&ms" + new Date().getTime();
-	    	dsSedes3.setURL(sUrl)
-	    	dsSedes3.loadData();
-		}
+                function detalleCarrera(){
+                        document.getElementById("busca_carrera").action = "carreras.do?accion=obtenerDetalleCarrera"
+                        document.getElementById("busca_carrera").submit();
+                }
 
-		function detalleCarrera(){
-			document.getElementById("busca_carrera").action = "carreras.do?accion=obtenerDetalleCarrera"
-			document.getElementById("busca_carrera").submit();
-		}
+                var myObserver = new Object;
+                myObserver.onPostLoad = function(dataSet, data)
+                {
+                        document.getElementById("modulo_form").style.display = 'none';
+                        document.getElementById("modulo_mensaje").style.display = 'block';
 
-		var myObserver = new Object;
-		myObserver.onPostLoad = function(dataSet, data)
-		{
-			document.getElementById("modulo_form").style.display = 'none';
-			document.getElementById("modulo_mensaje").style.display = 'block';
+                        if (dataSet.getData()[0]["STATUS"] == "OK"){
+                                document.getElementById("msg_status").innerHTML = "<h4>Gracias por solicitar informaci&oacute;n.<br>Te contactaremos con novedades respecto a las carreras y sedes de tu inter&eacute;s</h4>";
+                                document.getElementById("img_status").innerHTML = '<img height="25" width="26" alt="" src="templates/home_portal/images/visto.png" />';
 
-			if (dataSet.getData()[0]["STATUS"] == "OK"){
-				document.getElementById("msg_status").innerHTML = "<h4>Gracias por solicitar informaci&oacute;n.<br>Te contactaremos con novedades respecto a las carreras y sedes de tu inter&eacute;s</h4>";
-				document.getElementById("img_status").innerHTML = '<img height="25" width="26" alt="" src="templates/home_portal/images/visto.png" />';
+                        }else{
+                                document.getElementById("msg_status").innerHTML = '<h4>C&oacute;digo de Verificaci&oacute;n incorrecto.<br>Vuela a ingresarlo</h4><br><img id="button6" src="templates/home_portal/images/volver.jpg" onclick="volverCap();" />';
+                                document.getElementById("img_status").innerHTML = '<img height="25" width="26" alt="" src="templates/home_portal/images/notice-alert.png" />';
+                        }
+                };
+                dsSuscripcion.addObserver(myObserver);
 
-			}else{
-				document.getElementById("msg_status").innerHTML = '<h4>C&oacute;digo de Verificaci&oacute;n incorrecto.<br>Vuela a ingresarlo</h4><br><img id="button6" src="templates/home_portal/images/volver.jpg" onclick="volverCap();" />';
-				document.getElementById("img_status").innerHTML = '<img height="25" width="26" alt="" src="templates/home_portal/images/notice-alert.png" />';
-			}
-		};
-		dsSuscripcion.addObserver(myObserver);
-
-		function volverCap(){
-			document.getElementById("modulo_mensaje").style.display = 'none';
-			document.getElementById("modulo_form").style.display = 'block';
-			document.getElementById("btloader").style.display = 'block';
-			document.getElementById("img_jcaptcha").src = "/admision/jcaptcha?tm=" + (new Date()).getTime();
-			document.getElementById("j_captcha_response").value = '';
-		}
+                function volverCap(){
+                        document.getElementById("modulo_mensaje").style.display = 'none';
+                        document.getElementById("modulo_form").style.display = 'block';
+                        document.getElementById("btloader").style.display = 'block';
+                }
 
 
-                */
+       
       window.addEvent('domready', function() {
 
         SqueezeBox.initialize({});
@@ -348,23 +344,18 @@
 
         <div class="borrado"></div>
         <div class="sombra"></div>
-        <div class="slider_menu">
-          <div class="moduletable_slider">
-            <div class="moduletable_slider"><a href="que-es-duoc-uc/acreditacion.html"><img src="images/stories/admision/banner/slider-swf-2.jpg" style="padding-left: 5px;" border="0" /></a></div>		</div>
-
-          <div class="moduletable">
-            <div class="moduletable_menu">
-              <ul>
-                <li><a href="carreras-y-sedes/buscador_diurnas.html">Carreras Diurnas</a></li>
-                <li><a href="carreras-y-sedes/buscador_vespertinas.html">Carreras Vespertinas</a></li>
-                <li><a href="http://www.duoc.cl/taller/talleres.htm" target="_blank" title="Talleres Vocacionales">Talleres Vocacionales</a></li>
-              </ul>
-            </div>		</div>
-
-          <div class="borrado"></div>
+        
+        <div class="moduletable_menu-inicio">
+        
+        <iframe src="http://www.duoc.cl/noticias/admision/noticias-modulos.html" scrolling="no" frameborder="0" width="256" height="554"></iframe>
+        
+        </div>
+        
+        <div class="slider_menu-inicio">
+        	<iframe src="http://www.duoc.cl/noticias/admision/slide/" scrolling="no" frameborder="0" width="716" height="182"></iframe>
         </div>
         <div class="centro">
-          <div class="moduletable">
+          <div class="moduletable-inicio">
             <style>
               #contenedor_general .contenedor_int .centro .moduletable_form .campos .campos_uno .textfield.error { border: 1px solid #FF0000; color:#FF0000; }
               #contenedor_general .contenedor_int .centro .moduletable_form .campos .campos_uno .select.error { border: 1px solid #FF0000; color:#FF0000; }
@@ -376,14 +367,16 @@
             <script type="text/javascript">
 
             </script>
-            
+
             <script type="text/javascript">
-            var RecaptchaOptions = {
-               lang : 'es'
-            };
+              var RecaptchaOptions = {
+                lang : 'es',
+                theme : 'custom',  
+                custom_theme_widget: 'recaptcha_widget' 
+              };
             </script>
-            
-            <form action="#" method="post" name="commentForm" id="commentForm" >
+
+            <form action="processRegistrese.php" method="post" name="commentForm" id="commentForm" >
               <div class="moduletable_form" id="modulo_form">
                 <div id="form_1">
                   <div class="tit">Regístrate para obtener más información sobre Duoc UC y sus carreras</div>
@@ -513,14 +506,14 @@
                       <div class="campos_uno">
                         <table width="121" border="0" cellpadding="0" cellspacing="0">
                           <tr>
-								<td width="121">
-									<span spry:region="dsCarrerasSusc">
-									<select name="carrera_op_1" id="carrera_op_1" spry:repeatchildren="dsCarrerasSusc" class="select" style="width:177px;" onchange="cargarSedes1();">
-  											<option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
-											<option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
-					   				</select>
-					   				</span>
-					   			</td>
+                            <td width="121">
+                              <span spry:region="dsCarrerasSusc">
+                                <select name="carrera_op_1" id="carrera_op_1" spry:repeatchildren="dsCarrerasSusc" class="select" style="width:177px;" onchange="cargarSedes1();">
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
+                                </select>
+                              </span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -532,13 +525,13 @@
                         <table width="121" border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td width="121">
-								<span spry:region="dsSedes1">
-								<select name="sedes_op_1"  spry:repeatchildren="dsSedes1" id="sedes_op_1" class="select" style="width:177px; border:#c0c0c0 1px solid;">
-										<option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
-										<option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
-								</select>
-								</span>
-							</td>
+                              <span spry:region="dsSedes1">
+                                <select name="sedes_op_1"  spry:repeatchildren="dsSedes1" id="sedes_op_1" class="select" style="width:177px; border:#c0c0c0 1px solid;">
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
+                                </select>
+                              </span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -550,13 +543,13 @@
                         <table width="121" border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td width="121">
-					   			<span spry:region="dsCarrerasSusc">
-									<select name="carrera_op_2" id="carrera_op_2" spry:repeatchildren="dsCarrerasSusc" class="select" style="width:177px;" onchange="cargarSedes2();">
-   										<option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
-										<option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
-					   				</select>
-					   			</span>
-					   		</td>
+                              <span spry:region="dsCarrerasSusc">
+                                <select name="carrera_op_2" id="carrera_op_2" spry:repeatchildren="dsCarrerasSusc" class="select" style="width:177px;" onchange="cargarSedes2();">
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
+                                </select>
+                              </span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -568,13 +561,13 @@
                         <table width="121" border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td width="121">
-							<span spry:region="dsSedes2">
-								<select name="sedes_op_2"  spry:repeatchildren="dsSedes2" id="sedes_op_2" class="select" style="width:177px; border:#c0c0c0 1px solid;">
-									<option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
-									<option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
-								</select>
-								</span>
-							</td>
+                              <span spry:region="dsSedes2">
+                                <select name="sedes_op_2"  spry:repeatchildren="dsSedes2" id="sedes_op_2" class="select" style="width:177px; border:#c0c0c0 1px solid;">
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
+                                </select>
+                              </span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -585,14 +578,14 @@
                       <div class="campos_uno">
                         <table width="121" border="0" cellpadding="0" cellspacing="0">
                           <tr>
-                           <td width="121">
-								<span spry:region="dsCarrerasSusc">
-									<select name="carrera_op_3" id="carrera_op_3" spry:repeatchildren="dsCarrerasSusc" class="select" style="width:177px;" onchange="cargarSedes3();">
-										<option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
-										<option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
-					   				</select>
-					   			</span>
-							</td>
+                            <td width="121">
+                              <span spry:region="dsCarrerasSusc">
+                                <select name="carrera_op_3" id="carrera_op_3" spry:repeatchildren="dsCarrerasSusc" class="select" style="width:177px;" onchange="cargarSedes3();">
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} == 0" selected="selected">{descripcion}</option>
+                                  <option value="{codigo}" spry:if="{ds_RowNumber} != 0">{descripcion}</option>
+                                </select>
+                              </span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -604,12 +597,12 @@
                         <table width="121" border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td width="121">
-								<span spry:region="dsSedes3">
-								<select name="sedes_op_3"  spry:repeatchildren="dsSedes3" id="sedes_op_3" class="select" style="width:177px; border:#c0c0c0 1px solid;">
-									<option value="{codigo}">{descripcion}</option>
-								</select>
-								</span>
-								</td>
+                              <span spry:region="dsSedes3">
+                                <select name="sedes_op_3"  spry:repeatchildren="dsSedes3" id="sedes_op_3" class="select" style="width:177px; border:#c0c0c0 1px solid;">
+                                  <option value="{codigo}">{descripcion}</option>
+                                </select>
+                              </span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -627,9 +620,9 @@
                       </table>
                     </div>
                     <div class="btn_dos">
-                    <img src="templates/home_portal/images/avanzar.jpg" alt="Avanzar &gt;&gt;" width="137" height="18" border="0" onclick="ver_paso(3);" style="cursor:pointer;"/>
+                      <img src="templates/home_portal/images/avanzar.jpg" alt="Avanzar &gt;&gt;" width="137" height="18" border="0" onclick="ver_paso(3);" style="cursor:pointer;"/>
+                    </div>
                   </div>
-					</div>
                 </div>
 
                 <div id="form_3" style="display:none;">
@@ -647,176 +640,137 @@
                   </div>
                   <div class="campos">
 
-<!--                    <div class="campos_uno">
-                      <table style="width: 121px;" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                          <tr>
-                            <td width="121">
-                              <img src="/admision/jcaptcha" id="img_jcaptcha" height="60" width="200">
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div id="recaptcha_widget" style="display:none">
+
+
+                      <div id="recaptcha_image"></div>
+                      <div class="recaptcha_only_if_incorrect_sol" style="color:red">Incorrecto</div>
+
+                      <span class="recaptcha_only_if_image recaptcha">Escriba las 2 palabras:</span>
+                      <span class="recaptcha_only_if_audio recaptcha">Ingrese los n&uacute;meros:</span>
+
+                      <input type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+
+                      <div><a href="javascript:Recaptcha.reload()" class="recaptcha">Obt&eacute;n un nuevo CAPTCHA</a></div>
+
+
                     </div>
-					<div class="nombre">* C&oacute;digo Verificaci&oacute;n:</div>
-                    <div class="campos_uno">
-                      <table style="width: 121px;" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                          <tr>
-                            <td width="121"><input class="textfield" style="width: 118px;" name="j_captcha_response" type="text" id="j_captcha_response" /></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>-->
-                    <?php
-                      require_once('./includes/ReCaptcha/recaptchalib.php');
-                      $publickey = "6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr";
-                      echo recaptcha_get_html($publickey);
-                    ?>
+
+                    <script type="text/javascript"
+                            src="http://www.google.com/recaptcha/api/challenge?k=6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr">
+                    </script>
+                    <noscript>
+                      <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr"
+                              height="300" width="500" frameborder="0"></iframe>
+
+                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                      </textarea>
+                      <input type="hidden" name="recaptcha_response_field"
+                             value="manual_challenge">
+                    </noscript>
                     <div class="borrado"></div>
-	                </div>
-	                <br/>
-					<br/>
-					<br/>
-					<br/>
-                                        <br/>
-					<br/>
-					<br/>
-                                        
-					<div class="btn_tres">
-						<div id="btloader">
-                                                  <center>
-							<img
-								src="templates/home_portal/images/solicitar_info.jpg"
-								alt="Avanzar &gt;&gt;" width="137" height="18" border="0"
-								style="cursor: pointer;" onclick="envia_form();" />
-                                                  </center>
-						</div>
-					</div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+
+                  <div class="btn_tres">
+                    <div id="btloader">
+                      <center>
+                        <img
+                          src="templates/home_portal/images/solicitar_info.jpg"
+                          alt="Avanzar &gt;&gt;" width="137" height="18" border="0"
+                          style="cursor: pointer;" onclick="envia_form();" />
+                      </center>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-				<div class="moduletable_form" id="modulo_mensaje" style="display: none">
+              <div class="moduletable_form" id="modulo_mensaje" style="display: none">
 
-				<table width="250" cellspacing="0" cellpadding="0" border="0" align="center" style="font-size:12px;">
-					<tbody>
-						<tr><td height="136">&nbsp;</td></tr>
-						<tr>
-							<td height="50">
-								<table width="28" cellspacing="0" cellpadding="0" border="0" align="center">
-									<tbody>
-										<tr>
-											<td width="28">
-												<span id="img_status">
-													<!-- <img height="25" width="26" alt="" src="templates/home_portal/images/visto.png"  />-->
-												</span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td height="20" align="center">
-								<span id="msg_status">
-									<h4>Gracias por solicitar información.<br>Te contactaremos con novedades respecto a las carreras y sedes de tu interés</h4>
-								</span>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+                <table width="250" cellspacing="0" cellpadding="0" border="0" align="center" style="font-size:12px;">
+                  <tbody>
+                    <tr><td height="136">&nbsp;</td></tr>
+                    <tr>
+                      <td height="50">
+                        <table width="28" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tbody>
+                            <tr>
+                              <td width="28">
+                                <span id="img_status">
+                                        <!-- <img height="25" width="26" alt="" src="templates/home_portal/images/visto.png"  />-->
+                                </span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="20" align="center">
+                        <span id="msg_status">
+                          <h4>Gracias por solicitar información.<br>Te contactaremos con novedades respecto a las carreras y sedes de tu interés</h4>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-				</div>
+              </div>
 
               <input type="hidden" name="tipo_solicitud" id="tipo_solicitud" value="91" />
             </form>
             <div id="adwords"></div>
             <div id="adfunky"></div>
-          </div>
-
+          
           <div class="moduletable">
             <div class="moduletable_buscador">
-                <div class="tit">Busca la carrera de tu inter&eacute;s</div>
-                <table width="417" border="0" align="center" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="left">
-                      <select id="escuela" name="escuela" class="select" style="width:201px; border:#c0c0c0 1px solid;">
-                        <option value="">Seleccione Escuela</option>
-                        <option value ='5'>Administración y Negocios</option>
-                        <option value ='2'>Comunicación</option>
-                        <option value ='3'>Construcción</option>
-                        <option value ='4'>Diseño</option>
-                        <option value ='6'>Informática y Telecomunicaciones</option>
-                        <option value ='7'>Ingeniería</option>
-                        <option value ='8'>Recursos Naturales</option>
-                        <option value ='9'>Salud</option>
-                        <option value ='10'>Turismo</option>
+              <div class="tit">Busca la carrera de tu inter&eacute;s</div>
+              <table width="417" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="left">
+                    <select id="escuela" name="escuela" class="select" style="width:201px; border:#c0c0c0 1px solid;">
+                      <option value="">Seleccione Escuela</option>
+                      <option value ='5'>Administración y Negocios</option>
+                      <option value ='2'>Comunicación</option>
+                      <option value ='3'>Construcción</option>
+                      <option value ='4'>Diseño</option>
+                      <option value ='6'>Informática y Telecomunicaciones</option>
+                      <option value ='7'>Ingeniería</option>
+                      <option value ='8'>Recursos Naturales</option>
+                      <option value ='9'>Salud</option>
+                      <option value ='10'>Turismo</option>
+                    </select>
+                  </td>
+                  <td>&nbsp;</td>
+                  <td align="right">
+                    <div id="Result_carreras">
+                      <select name="select_carr" id="select_carr" class="select" style="width:201px; border:#c0c0c0 1px solid; ">
+                        <option value="">Selecciona Carrera</option>
                       </select>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td align="right">
-                      <div id="Result_carreras">
-                        <select name="select_carr" id="select_carr" class="select" style="width:201px; border:#c0c0c0 1px solid; ">
-                          <option value="">Selecciona Carrera</option>
-                        </select>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-                <div class="borrado"></div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <div class="modulos">
+                
+                <iframe src="http://www.duoc.cl/noticias/admision/modulos.html" scrolling="no" frameborder="0" width="437" height="246"></iframe>
+                
+                </div>
+              
+              <div class="borrado"></div>
             </div>
           </div>
 
-          <div class="moduletable">
-            <div class="moduletable_banner"><a href="noticias/duoc-uc-amplia-su-oferta-de-carreras-para-el-2011.html"><img src="images/stories/admision/banner/caluga_admision.jpg" border="0" width="255" height="80" /></a></div>		</div>
+          
 
-          <div class="modulos">
-            <div class="moduletable">
-              <div class="moduletable_porque">
-                <div class="tit">¿Por qué Duoc UC?</div>
-                <ul>
-                  <li>Comprometidos con la educación de calidad</li>
-                  <li>Te ayudamos a financiar tus estudios</li>
-                  <li>Ofrecemos carreras que compatibilizan trabajo y estudios</li>
-                </ul>
-              </div>		</div>
-
-            <div class="moduletable">
-              <div class="moduletable_testimonios">
-                <div class="tit">Sede San Joaquín</div>
-                <div class="image"><img height="97" width="86" src="images/stories/carreras/sede_nueva.jpg" border="0" /></div>
-                <div class="txt">La nueva sede alojará a las Escuelas de Salud e Ingeniería. ¡Conócela!</div>
-                <div class="ver_mas"><a href="detalle-de-la-sede/sede/san-joaquin.html">Ver más</a></div>
-              </div>		</div>
-
-            <div class="moduletable">
-
-
-
-              <div class="moduletable_noticias">
-                <div class="tit">Noticias</div>
-                <div class="content">
-
-                  <div class="image"><a href="noticias/duoc-uc-vuelve-con-todo.html"><img src="media/k2/items/cache/7be335477876db854960134c6e137164_S.jpg" border="0" width="70" height="40" /></a></div>
-                  <div class="txt_uno">Duoc UC vuelve con todo</div>
-                  <div class="txt_dos"></div>
-                  <div class="ver_mas"><a href="noticias/duoc-uc-vuelve-con-todo.html">Ver m&aacute;s</a></div>
-                  <div class="borrado"></div>
-                </div>
-                <div class="content_dos">
-
-                  <div class="image"><a href="noticias/juegos-olimpicos-2010.html"><img src="media/k2/items/cache/c10c64c27e0606d1654b81b9bb482558_S.jpg" border="0" width="70" height="40" /></a></div>
-                  <div class="txt_uno">Juegos Olímpicos 2010</div>
-                  <div class="txt_dos"></div>
-                  <div class="ver_mas"><a href="noticias/juegos-olimpicos-2010.html">Ver m&aacute;s</a></div>
-                  <div class="borrado"></div>
-                </div>
-
-                <div class="btn"><a href="noticias.html"><img src="templates/home_portal/images/ver_t_not.jpg" border="0" alt="ver todas las noticias" width="154" height="20" /></a></div>
-              </div>
-            </div>
-
-          </div>
+         
+        </div>
         </div>
         <div style="margin: 0pt; padding: 0pt; height: 7px;"></div>
         <div class="footer">

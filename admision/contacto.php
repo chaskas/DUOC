@@ -243,9 +243,11 @@
               }		
             </script>
             <script type="text/javascript">
-            var RecaptchaOptions = {
-               lang : 'es'
-            };
+              var RecaptchaOptions = {
+                lang : 'es',
+                theme : 'custom',  
+                custom_theme_widget: 'recaptcha_widget' 
+              };
             </script>
             <form name="frmdatos" id="frmdatos" method="post" action="processContact.php">
               <div class="titulo">Contacto</div>
@@ -294,27 +296,41 @@
                       <td>&nbsp;</td>
                       <td><label for="mensaje" generated="true" class="error"></label></td>
                     </tr>
-                                <?php
-                                  require_once('./includes/ReCaptcha/recaptchalib.php');
-                                  $publickey = "6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr";
-                                  echo "<tr><td>&nbsp;</td><td colspan='3'>".recaptcha_get_html($publickey)."</td></tr>";
-                                ?>
-                    <!--<tr>
-                            <td height="19" align="right" valign="middle">&nbsp;</td>
-                            <td height="19" valign="middle">
-                            &nbsp;<img src="/admision/jcaptcha">
-                            </td>
-                            <td valign="middle">&nbsp;</td>
-                            <td>&nbsp;</td>
-                    </tr>				
                     <tr>
-                            <td height="19" align="right" valign="middle">&nbsp;C&oacute;digo de Verificaci&oacute;n</td>
-                            <td height="19" valign="middle">
-                            &nbsp;<input type='text' name='j_captcha_response' id='j_captcha_response' value=''>
-                            </td>
-                            <td valign="middle">&nbsp;</td>
-                            <td>&nbsp;<label for="j_captcha_response" generated="true" class="error"><</td>
-                    </tr>-->
+                      <td>&nbsp;</td>
+                      <td colspan="3">
+                        <div id="recaptcha_widget" style="display:none">
+                          
+
+                            <div id="recaptcha_image"></div>
+                            <div class="recaptcha_only_if_incorrect_sol" style="color:red">Incorrect please try again</div>
+
+                            <span class="recaptcha_only_if_image">Escriba las 2 palabras:</span>
+                            <span class="recaptcha_only_if_audio">Ingrese los n&uacute;meros:</span>
+
+                            <input type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+
+                            <div><a href="javascript:Recaptcha.reload()">Obt&eacute;n un nuevo CAPTCHA</a></div>
+                         
+
+                        </div>
+
+                        <script type="text/javascript"
+                                src="http://www.google.com/recaptcha/api/challenge?k=6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr">
+                        </script>
+                        <noscript>
+                          <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr"
+                                  height="300" width="500" frameborder="0"></iframe>
+
+                          <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                          </textarea>
+                          <input type="hidden" name="recaptcha_response_field"
+                                 value="manual_challenge">
+                        </noscript>
+                      </td>
+                    </tr>
+                   
+                    
                     <tr>
                       <td height="27" align="center" valign="middle">&nbsp;</td>
                       <td height="27" valign="top">&nbsp;</td>

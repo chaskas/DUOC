@@ -20,10 +20,10 @@
 
 
     <script type="text/javascript">
-      var dsCarrerasSusc = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obtenerCarrerasElement&op1=1", "ResultElement/listaElementos");
-      var dsSedes1 = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obteneSedesElement&op1=1", "ResultElement/listaElementos");
-      var dsSedes2 = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obteneSedesElement&op1=1", "ResultElement/listaElementos");
-      var dsSedes3 = new Spry.Data.XMLDataSet("/admision/carreras.do?accion=obteneSedesElement&op1=1", "ResultElement/listaElementos");
+      var dsCarrerasSusc = new Spry.Data.XMLDataSet("./carreras.php", "ResultElement/listaElementos");
+      var dsSedes1 = new Spry.Data.XMLDataSet("./sedes.php?idCarrera=1", "ResultElement/listaElementos");
+      var dsSedes2 = new Spry.Data.XMLDataSet("./sedes.php?idCarrera=1", "ResultElement/listaElementos");
+      var dsSedes3 = new Spry.Data.XMLDataSet("./sedes.php?idCarrera=1", "ResultElement/listaElementos");
 		
       var dsSuscripcion = new Spry.Data.XMLDataSet(null, "RESULT");
       function enviarSuscripcion(){			
@@ -33,7 +33,6 @@
         var ap_materno = document.getElementById("ap_materno").value;
         var email = document.getElementById("email").value;
         var celular = document.getElementById("celular").value;
-        var cap = document.getElementById("j_captcha_response").value;
 			
         var tipo_solicitud = "";//document.getElementById("tipo_solicitud").value;
         var carrera_op_1 = document.getElementById("carrera_op_1").value;
@@ -47,7 +46,7 @@
         var sParams  = "rut=" + rut + "&nombre=" + nombre + "&ap_paterno=" + ap_paterno + "&ap_materno=" + ap_materno;
         sParams  = sParams + "&email=" + email + "&celular=" + celular + "&tipo_solicitud=" + tipo_solicitud + "&carrera_op_1=" + carrera_op_1;
         sParams  = sParams + "&carrera_op_2=" + carrera_op_2 + "&carrera_op_3=" + carrera_op_3 + "&sedes_op_1=" + sedes_op_1 + "&sedes_op_2=" + sedes_op_2;    
-        sParams  = sParams + "&sedes_op_3=" + sedes_op_3 + "&actividades=" + actividades + "&j_captcha_response=" + cap;
+        sParams  = sParams + "&sedes_op_3=" + sedes_op_3 + "&actividades=" + actividades;
 						
         var sUrl = "/admision/carreras.do?accion=enviarSuscripcion&" + sParams + "&ms" + new Date().getTime();
         dsSuscripcion.setURL(sUrl);
@@ -58,19 +57,19 @@
 				
       function cargarSedes1(){
         var idCarrera = document.getElementById("carrera_op_1").value;
-        var sUrl = "/admision/carreras.do?accion=obteneSedesElement&idCarrera=" + idCarrera + "&op1=1&ms" + new Date().getTime();
+        var sUrl = "./sedes.php?idCarrera=" + idCarrera;
         dsSedes1.setURL(sUrl)
         dsSedes1.loadData();
       }
       function cargarSedes2(){
         var idCarrera = document.getElementById("carrera_op_2").value;
-        var sUrl = "/admision/carreras.do?accion=obteneSedesElement&idCarrera=" + idCarrera + "&op1=1&ms" + new Date().getTime();
+        var sUrl = "./sedes.php?idCarrera=" + idCarrera;
         dsSedes2.setURL(sUrl)
         dsSedes2.loadData();
       }		
       function cargarSedes3(){
         var idCarrera = document.getElementById("carrera_op_3").value;
-        var sUrl = "/admision/carreras.do?accion=obteneSedesElement&idCarrera=" + idCarrera + "&op1=1&ms" + new Date().getTime();
+        var sUrl = "./sedes.php?idCarrera=" + idCarrera;
         dsSedes3.setURL(sUrl)
         dsSedes3.loadData();
       }	
@@ -180,8 +179,9 @@
             email			: { required: true, email: true },			
             /*celular			: { required: true },*/
             actividades		: { required: true },					
-            carrera_op_1	: { required: true},
-            sedes_op_1		: { required: true }
+            carrera_op_1	: { required: false},
+            sedes_op_1		: { required: false },
+            recaptcha_response_field: { required: true }	
             /*j_captcha_response :{ required: true }*/
           },
           messages: {
@@ -193,7 +193,8 @@
             /*celular			: { required: "" },*/
             actividades		: { required: "" },
             carrera_op_1	: { required: "" },
-            sedes_op_1		: { required: "" }
+            sedes_op_1		: { required: "" },
+            recaptcha_response_field: { required: "" }
             /*j_captcha_response: { required: "" , minlength: "" }*/
           }		
         });			
@@ -210,7 +211,7 @@
 
       function envia_form(){							
         if (jQuery('#frmreg').valid()){
-          enviarSuscripcion();
+          jQuery('#frmreg').submit();
         }			
       }
     </script>
@@ -242,11 +243,13 @@
     </script>
 
     <script type="text/javascript">
-    var RecaptchaOptions = {
-       lang : 'es'
-    };
+      var RecaptchaOptions = {
+        lang : 'es',
+        theme : 'custom',  
+        custom_theme_widget: 'recaptcha_widget' 
+      };
     </script>
-    <form method="post" action="" id="frmreg" name="frmreg">
+    <form method="post" action="processRegistrese.php" id="frmreg" name="frmreg">
       <div id="modulo_form" class="thickbox">
         <div class="campos">
           <table width="316" cellspacing="0" cellpadding="0" border="0">
@@ -488,29 +491,49 @@
                           <label for="checkbox"></label>
                         </td>
                       </tr>
-<!--                      <tr><td colspan="6" height="30">&nbsp;</td></tr>-->
-                       <?php
-                          require_once('./includes/ReCaptcha/recaptchalib.php');
-                          $publickey = "6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr";
-                          echo "<tr><td colspan='6'>".recaptcha_get_html($publickey)."</td></tr>";
-                      ?>
-                      <!--<tr>
-                        <td colspan="6">&nbsp;<img src="/admision/jcaptcha" id="img_jcaptcha"></td>												
-                      </tr>
                       <tr>
-                        <td colspan="3">&nbsp;C&oacute;digo de Verificaci&oacute;n</td>
-                        <td colspan="3">
-                          &nbsp;<input type='text' name='j_captcha_response' id='j_captcha_response' value='' style="width: 147px;" class="textfield">
-                          <label for="j_captcha_response" generated="true" class="error"></label>
+                        <td colspan="6">
+
+                          <div id="recaptcha_widget" style="display:none">
+                            <center>
+
+                            <div id="recaptcha_image"></div>
+                            <div class="recaptcha_only_if_incorrect_sol" style="color:red">Incorrect please try again</div>
+
+                            <span class="recaptcha_only_if_image">Escriba las 2 palabras:</span>
+                            <span class="recaptcha_only_if_audio">Ingrese los n&uacute;meros:</span>
+
+                            <input type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+
+                            <div><a href="javascript:Recaptcha.reload()">Obt&eacute;n un nuevo CAPTCHA</a></div>
+                            </center>
+
+                          </div>
+
+                          <script type="text/javascript"
+                                  src="http://www.google.com/recaptcha/api/challenge?k=6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr">
+                          </script>
+                          <noscript>
+                          <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeCKckSAAAAAJr1AE478GzjftXZqdOSg4q39egr"
+                                  height="300" width="500" frameborder="0"></iframe>
+
+                          <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                          </textarea>
+                          <input type="hidden" name="recaptcha_response_field"
+                                 value="manual_challenge">
+                          </noscript>
+
                         </td>
-                      </tr>-->											
+                      </tr>
+
                       <tr>
                         <td height="30" valign="bottom" align="center" colspan="6">
 
                           <div id="btloader">														
                             <center>
                               <img height="18" width="146" border="0"
-                                   onclick="envia_form();" style="cursor: pointer;"
+                                   style="cursor: pointer;"
+                                   onclick="envia_form()"
                                    alt="Solicita Informacion"
                                    src="templates/home_portal/images/solicita.jpg"/>
                             </center>

@@ -7,6 +7,7 @@ jQuery(document).ready(function(){
 			rut				: { required: true },			
 			email			: { required: true, email: true },	
 			actividades		: { required: true }
+                        
 			
 		},
 		messages: {
@@ -36,7 +37,6 @@ function ver_paso(num){
 		document.getElementById('form_3').style.display = "none";
 		jQuery('#carrera_op_1').rules("remove");
 		jQuery('#sedes_op_1').rules("remove");	
-		jQuery('#j_captcha_response').rules("remove");
 		document.getElementById('form_'+num).style.display = "block";	
 	} 
 	if (num == 2){
@@ -46,7 +46,6 @@ function ver_paso(num){
 			
 			jQuery('#carrera_op_1').rules("add", { required: true, messages: { required: "" }});
 			jQuery('#sedes_op_1').rules("add", { required: true, messages: { required: "" }});
-			//jQuery('#j_captcha_response').rules("add", { required: true, messages: { required: "" }});	
 			document.getElementById('form_'+num).style.display = "block";	
 		}
 	}	
@@ -55,8 +54,7 @@ function ver_paso(num){
 			document.getElementById('form_1').style.display = "none";
 			document.getElementById('form_2').style.display = "none";
 			jQuery('#carrera_op_1').rules("remove");
-			jQuery('#sedes_op_1').rules("remove");				
-			jQuery('#j_captcha_response').rules("add", { required: true, messages: { required: "" }});	
+			jQuery('#sedes_op_1').rules("remove");					
 			document.getElementById('form_'+num).style.display = "block";
 		}	
 	}		

@@ -26,13 +26,8 @@ require_once './includes/Swift-4.1.2/lib/swift_required.php';
 //ENVIAR CORREO
 
 //Create the Transport
-//$transport = Swift_SmtpTransport::newInstance('localhost', 25);
+$transport = Swift_SmtpTransport::newInstance('localhost', 25);
 
-//Create the Transport
-$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465,'ssl')
-  ->setUsername('mr.chaskas@gmail.com')
-  ->setPassword('lagoranco1809')
-  ;
 
 foreach($destinatarios as $nombre => $correo){
 
